@@ -19,8 +19,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link href="css/style.css" rel="stylesheet">
-    <script src="js/scripts.js"></script>
+    <link href="../css/style.css" rel="stylesheet">
+    <script src="../js/scripts.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
@@ -28,7 +28,6 @@
 
 </head>
 <header>
-
     <nav class="navbar bar navbar-expand-lg navbar-dark">
         <a class="navbar-brand" href="Home.php">Book's Corner</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -62,43 +61,6 @@
 <body>
 
 
-<div class="container card">
-    <div class="row">
-        <div class="col login">
-            <div class="card">
-                <div class="card-body">
-                    <h1>Login</h1><br><br>
-                    <p><strong>Email</strong></p>
-                    <input type="email" id="Email" name="Email"><br><br>
-                    <p><strong>Password</strong></p>
-                    <input type="password" id="password" name="password"><br><br>
-                    <p id="wrong" style="color: red"></p>
-                    <input type="submit" onclick="insert()" class="btn btn-primary" id="login"
-                           value="Accedi"><br><br>
-                    <p>Non sei ancora registrato?</p>
-                    <button onclick="show()" type="button" class="btn btn-link" style="margin-bottom: 25px">Crea il tuo account</button>
-                </div>
-            </div>
-        </div>
-        <div class="col register" id="signup">
-            <div class="card">
-                <div class="card-body">
-                    <h1> Sign Up</h1><br><br>
-                    <p><strong>Nome e Cognome</strong></p>
-                    <input type="text" id="nome" name="Nome e Cognome"><br><br>
-                    <p><strong>Email</strong></p>
-                    <input type="email" id="email-sign" name="Email"><br><br>
-                    <p><strong>Password</strong></p>
-                    <input type="password" id="password-sign" name="password"><br><br>
-                    <p id="email" style="color: red"></p>
-                    <input type="submit" onclick="email()" class="btn btn-primary" id="signup-btn"
-                           value="Registrati">
-                    <button onclick="canc()" type="button" class="btn btn-primary" id="canc">Pulisci</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 <footer class="bg-white">
     <div class="py-10 foot">
         <div class="row py-4">
@@ -143,3 +105,4 @@
 </footer>
 </body>
 </html>
+<?php

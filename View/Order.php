@@ -30,7 +30,7 @@
 <header>
 
     <nav class="navbar bar navbar-expand-lg navbar-dark">
-        <a class="navbar-brand" href="/">Book's Corner</a>
+        <a class="navbar-brand" href="Home.php">Book's Corner</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -38,16 +38,21 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item ">
-                    <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="Home.php">Home<span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Categorie</a>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" >Categorie</a>
+                    <div class="dropdown-content">
+                        <a href="#">Fantasy</a>
+                        <a href="#">Avventura</a>
+                        <a href="#">Romanzi</a>
+                    </div>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Contatti</a>
                 </li>
             </ul>
-            <a href="#profile.html"> <i class="fa fa-user" aria-hidden="true"></i></a>
+            <a href="Profile.php"> <i class="fa fa-user" aria-hidden="true"></i></a>
         </div>
     </nav>
 
@@ -61,11 +66,11 @@
     <div class="row">
         <div class="col-4">
             <h2 class="w3-bar-item side">Menu</h2>
-            <a href="/profile" id="datac" class="w3-bar-item w3-button "><strong>I Miei Dati</strong></a><br>
+            <a href="Profile.php" id="datac" class="w3-bar-item w3-button "><strong>I Miei Dati</strong></a><br>
             <a href="#" id="orderac" class="w3-bar-item w3-button active"><strong>I Miei
                     Ordini</strong></a><br>
-            <a href="/payment" id="payac" class="w3-bar-item w3-button"><strong>Metodi di Pagamento</strong></a><br>
-            <a href="/address" id="addressc" class="w3-bar-item w3-button"><strong>In Tuoi
+            <a href="Payment.php" id="payac" class="w3-bar-item w3-button"><strong>Metodi di Pagamento</strong></a><br>
+            <a href="Address.php" id="addressc" class="w3-bar-item w3-button"><strong>In Tuoi
                     Indirizzi</strong></a><br>
         </div>
         <div class="col-8">

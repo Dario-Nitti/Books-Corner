@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
 <head>
@@ -30,7 +30,7 @@
 <header>
 
     <nav class="navbar bar navbar-expand-lg navbar-dark">
-        <a class="navbar-brand" href="/">Book's Corner</a>
+        <a class="navbar-brand" href="Home.php">Book's Corner</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -38,16 +38,21 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item ">
-                    <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="Home.php">Home<span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Categorie</a>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" >Categorie</a>
+                    <div class="dropdown-content">
+                        <a href="#">Fantasy</a>
+                        <a href="#">Avventura</a>
+                        <a href="#">Romanzi</a>
+                    </div>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Contatti</a>
                 </li>
             </ul>
-            <a href="#profile.html"> <i class="fa fa-user" aria-hidden="true"></i></a>
+            <a href="Profile.php"> <i class="fa fa-user" aria-hidden="true"></i></a>
         </div>
     </nav>
 
@@ -57,22 +62,84 @@
 <body>
 
 
-<
 <div class="container card">
     <div class="row">
         <div class="col-4">
             <h2 class="w3-bar-item side">Menu</h2>
-            <a href="/profile" id="datac" class="w3-bar-item w3-button "><strong>I Miei Dati</strong></a><br>
-            <a href="/myorders" id="orderac" class="w3-bar-item w3-button active"><strong>I Miei Ordini</strong></a><br>
+            <a href="Profile.php" id="datac" class="w3-bar-item w3-button "><strong>I Miei Dati</strong></a><br>
+            <a href="Order.php" id="orderac" class="w3-bar-item w3-button active"><strong>I Miei Ordini</strong></a><br>
             <a href="#" id="payac" class="w3-bar-item w3-button"><strong>Metodi di Pagamento</strong></a><br>
-            <a href="/address" id="addressc" class="w3-bar-item w3-button"><strong>In Tuoi
+            <a href="Address.php" id="addressc" class="w3-bar-item w3-button"><strong>In Tuoi
                     Indirizzi</strong></a><br>
         </div>
-        <div class="col-8">
+        <div class="col-4">
+            <h3>I Tuoi Metodi di Pagamento </h3>
+            <div class="card pay">
+                <div class="card-body">
+                    <h5>$metododipagamento</h5>
+                </div>
+            </div>
+            <br>
+            <p>Non hai un metodo di pagamento?</p>
+            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#pay"
+                    style="margin-left:-15px; margin-top: -10px ">Aggiungi il tuo
+                metodo di pagamento
+            </button>
+            <div class="modal fade" id="pay" role="document">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <h3 class="modal-title">INSERISCI I DATI DELLA TUA CARTA</h3>
+                        <div class="modal-body">
+                            <input class="input" type="text" name="nome" id="intest" placeholder="Nome"><br><br>
+                            <input class="input" type="email" id="numcard" name="Ncarta" placeholder="Numero Carta"><br><br>
+                            <input type="text" id="pin" name="cvv" maxlength="3" size="3" placeholder="CVV"><br><br>
+                            <p><strong>Data di scadenza</strong></p>
+                            <span>
+                    <select name="Mese">
+                                    <option value="null"></option>
+                                    <option value="01">1</option>
+                                    <option value="02">2</option>
+                                    <option value="03">3</option>
+                                    <option value="04">4</option>
+                                    <option value="05">5</option>
+                                    <option value="06">6</option>
+                                    <option value="07">7</option>
+                                    <option value="08">8</option>
+                                    <option value="09">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                    </select>
+                </span>
+                            <span>
+                    <select name="year">
+                             <option value="null"></option>
+                             <option value="2030">2030</option>
+                          <option value="2029">2029</option>
+                          <option value="2028">2028</option>
+                          <option value="2027">2027</option>
+                          <option value="2026">2026</option>
+                          <option value="2025">2025</option>
+                          <option value="2024">2024</option>
+                          <option value="2023">2023</option>
+                          <option value="2022">2022</option>
+                          <option value="2021">2021</option>
+                         <option value="2020">2020</option>
+                    </select>
+                </span><br>
 
+                            <button class="btn btn-primary"
+                                    style=" margin-top: 20px">
+                                Inserisci
+                            </button>
+                    </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+
 
 <footer class="bg-white">
     <div class="py-10 foot">
@@ -100,7 +167,7 @@
                                class="form-control border-0 shadow-0">
                         <div class="input-group-append">
                             <button id="button-addon1" type="submit" class="btn btn-link"><i
-                                    class="fa fa-paper-plane"></i></button>
+                                        class="fa fa-paper-plane"></i></button>
                         </div>
                     </div>
                 </div>
