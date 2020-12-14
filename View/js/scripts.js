@@ -48,7 +48,5 @@ function email() {
     if (emailsign.length == 0)
         document.getElementById("email").innerHTML = "Inserisci la tua email";
 
-
 }
-
 

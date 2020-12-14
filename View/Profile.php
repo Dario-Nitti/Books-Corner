@@ -7,6 +7,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Profilo</title>
 
 
     <!-- Bootstrap CSS -->
@@ -49,7 +50,7 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contatti</a>
+                    <a class="nav-link" href="Contact.php">Contatti</a>
                 </li>
             </ul>
             <a href="Profile.php"> <i class="fa fa-user" aria-hidden="true"></i></a>

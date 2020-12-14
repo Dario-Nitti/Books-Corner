@@ -1,6 +1,7 @@
+
 <!doctype html>
 
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -8,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Error</title>
+    <title>Contatti</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
@@ -20,13 +21,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link href="../css/style.css" rel="stylesheet">
-    <script src="../js/scripts.js"></script>
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/scripts.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
-<body>
+
 </head>
 <header>
     <nav class="navbar bar navbar-expand-lg navbar-dark">
@@ -49,35 +50,40 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../Contact.php">Contatti</a>
+                    <a class="nav-link" href="#">Contatti</a>
                 </li>
             </ul>
-            <a href="../Profile.php"> <i class="fa fa-user" aria-hidden="true"></i></a>
+            <a href="Profile.php"> <i class="fa fa-user" aria-hidden="true"></i></a>
         </div>
     </nav>
 
 
 </header>
-<div class="row">
 
-    <div class="col">
-        <div class="error-img">
-            <img src="../img/error.png" alt="error" width="750" height="750">
-        </div>
-    </div>
-    <div class="col">
-        <div class="error-title">
-            <div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-396ef71ce5d4fd132f64">
-                <div class="sqs-block-content">
-                    <p style="text-align: center; white-space: pre-wrap;">Awww...Don’t Cry.</p>
-                    <h1 style="text-align: center; white-space: pre-wrap;">It's just a 404 Error!</h1>
-                </div>
-            </div>
-        </div>
-    </div>
+<body>
+<div class="container card">
+<form action="mail.php" method="POST" id="actionID">
+    <h2>Contattaci</h2>
+    <p>Hai domande? Non esitare a contattarci direttamente. Il nostro team ti aiuterà.</p>
+
+
+            <p><strong>Nome</strong></p>
+            <input type="text" id="name" name="name" class="form-control" placeholder="Nome"><br>
+
+            <p><strong>Email</strong></p>
+            <input type="email" id="email" name="email" class="form-control" style="width: 100%"
+                   placeholder="La tua Email"><br>
+
+            <p><strong>Messaggio</strong></p>
+            <textarea type="text" id="message" name="message" class="form-control"
+                      placeholder="Inserisci qui il tuo testo"></textarea><br><br>
+
+            <button onclick="InputNull();" class="btn btn-primary send" type="submit" value="Submit">Invia
+            </button>
+
+
+</form>
 </div>
-
-
 
 
 <footer class="bg-white">
@@ -85,7 +91,7 @@
         <div class="row py-4">
             <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 bottomlogo">
 
-                <img src="../img/logo.png" alt="" width="180" class="mb-3">
+                <img src="img/logo.png" alt="" width="180" class="mb-3">
                 <p class="font-italic text-muted">Book's Corner, il tuo sito affidabile </p>
 
             </div>
@@ -122,6 +128,21 @@
 
 
 </footer>
+<script>
+    function InputNull() {
+        var input = document.getElementById("name");
+        var input2 = document.getElementById("email");
+        var email = document.getElementById("actionID");
+
+        if (input2.value.length == 0 && input.value.length == 0) {
+            alert("Non hai inserito il tuo nome e la tua email");
+            email.action = "";
+        } else {
+            return true;
+
+
+        }
+    }
+</script>
 </body>
 </html>
-
