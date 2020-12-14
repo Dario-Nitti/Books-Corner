@@ -52,8 +52,10 @@
                     <a class="nav-link" href="../Contact.php">Contatti</a>
                 </li>
             </ul>
-            <a href="../Profile.php"> <i class="fa fa-user" aria-hidden="true"></i></a>
-        </div>
+            <div class="user">
+                <a href="Cart.php" class="fas fa-shopping-cart" aria-hidden="true"></a>
+                <a href="Profile.php" class="fa fa-user" aria-hidden="true"></a>
+            </div>        </div>
     </nav>
 
 

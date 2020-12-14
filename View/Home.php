@@ -42,18 +42,21 @@
                     <a class="nav-link" href="Home.php">Home<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" >Categorie</a>
-                        <div class="dropdown-content">
-                            <a href="#">Fantasy</a>
-                            <a href="#">Avventura</a>
-                            <a href="#">Romanzi</a>
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Categorie</a>
+                    <div class="dropdown-content">
+                        <a href="#">Fantasy</a>
+                        <a href="#">Avventura</a>
+                        <a href="#">Romanzi</a>
                     </div>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="Contact.php">Contatti</a>
                 </li>
             </ul>
-            <a href="Profile.php"> <i class="fa fa-user" aria-hidden="true"></i></a>
+            <div class="user">
+                <a href="Cart.php" class="fas fa-shopping-cart" aria-hidden="true"></a>
+                <a href="Profile.php" class="fa fa-user" aria-hidden="true"></a>
+            </div>
         </div>
     </nav>
 

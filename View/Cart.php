@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html lang="en">
 <head>
@@ -7,9 +7,8 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Pagamento</title>
 
-
+    <title>Carrello</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
           integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
@@ -29,7 +28,6 @@
 
 </head>
 <header>
-
     <nav class="navbar bar navbar-expand-lg navbar-dark">
         <a class="navbar-brand" href="Home.php">Book's Corner</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -42,7 +40,7 @@
                     <a class="nav-link" href="Home.php">Home<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" >Categorie</a>
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Categorie</a>
                     <div class="dropdown-content">
                         <a href="#">Fantasy</a>
                         <a href="#">Avventura</a>
@@ -63,87 +61,75 @@
 </header>
 
 <body>
-
-
-<div class="container card">
-    <div class="row">
-        <div class="col-4">
-            <h2 class="w3-bar-item side">Menu</h2>
-            <a href="Profile.php" id="datac" class="w3-bar-item w3-button "><strong>I Miei Dati</strong></a><br>
-            <a href="Order.php" id="orderac" class="w3-bar-item w3-button active"><strong>I Miei Ordini</strong></a><br>
-            <a href="#" id="payac" class="w3-bar-item w3-button"><strong>Metodi di Pagamento</strong></a><br>
-            <a href="Address.php" id="addressc" class="w3-bar-item w3-button"><strong>In Tuoi
-                    Indirizzi</strong></a><br>
-        </div>
-        <div class="col-4">
-            <h3>I Tuoi Metodi di Pagamento </h3>
-            <div class="card pay">
-                <div class="card-body">
-                    <h5>$metododipagamento</h5>
-                </div>
-            </div>
-            <br>
-            <p>Non hai un metodo di pagamento?</p>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#pay"
-                    style="margin-left:-15px; margin-top: -10px ">Aggiungi il tuo
-                metodo di pagamento
-            </button>
-            <div class="modal fade" id="pay" role="document">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <h3 class="modal-title">INSERISCI I DATI DELLA TUA CARTA</h3>
-                        <div class="modal-body">
-                            <input class="input" type="text" name="nome" id="intest" placeholder="Nome"><br><br>
-                            <input class="input" type="email" id="numcard" name="Ncarta" placeholder="Numero Carta"><br><br>
-                            <input type="text" id="pin" name="cvv" maxlength="3" size="3" placeholder="CVV"><br><br>
-                            <p><strong>Data di scadenza</strong></p>
-                            <span>
-                    <select name="Mese">
-                                    <option value="null"></option>
-                                    <option value="01">1</option>
-                                    <option value="02">2</option>
-                                    <option value="03">3</option>
-                                    <option value="04">4</option>
-                                    <option value="05">5</option>
-                                    <option value="06">6</option>
-                                    <option value="07">7</option>
-                                    <option value="08">8</option>
-                                    <option value="09">9</option>
-                                    <option value="10">10</option>
-                                    <option value="11">11</option>
-                                    <option value="12">12</option>
-                    </select>
-                </span>
-                            <span>
-                    <select name="year">
-                             <option value="null"></option>
-                             <option value="2030">2030</option>
-                          <option value="2029">2029</option>
-                          <option value="2028">2028</option>
-                          <option value="2027">2027</option>
-                          <option value="2026">2026</option>
-                          <option value="2025">2025</option>
-                          <option value="2024">2024</option>
-                          <option value="2023">2023</option>
-                          <option value="2022">2022</option>
-                          <option value="2021">2021</option>
-                         <option value="2020">2020</option>
-                    </select>
-                </span><br>
-
-                            <button class="btn btn-primary"
-                                    style=" margin-top: 20px">
-                                Inserisci
-                            </button>
-                    </div>
+<div class="row">
+    <div class="col-10">
+        <div class="container card">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="cart-page">
+                        <h1> Carrello</h1>
+                        <div class="container">
+                            <table id="cart" class="table table-hover table-condensed">
+                                <thead>
+                                <tr>
+                                    <th style="width:50%">Prodotto</th>
+                                    <th style="width:10%">Prezzo</th>
+                                    <th style="width:8%">Quantità</th>
+                                    <th style="width:10%"></th>
+                                    <th style="width:10%"></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td data-th="Product">
+                                        <div class="row">
+                                            <div class="col-sm-2 hidden-xs"><img src="img/1.jpg" alt="..."
+                                                                                 class="img-responsive"/></div>
+                                            <div class="col-sm-10">
+                                                <h4 class="nomargin"></h4>
+                                                <p></p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <!--- prezzo--->
+                                    <td data-th="Price">$Price</td>
+                                    <td data-th="Quantity">
+                                        <input type="number" class="form-control text-center" value="1">
+                                    </td>
+                                    <!---subtotale-->
+                                    <td data-th="Subtotal" class="text-center"></td>
+                                </tr>
+                                </tbody>
+                                <tfoot>
+                                <tr class="visible-xs">
+                                    <td class="text-center"><strong></strong></td>
+                                    <!--totale-->
+                                </tr>
+                                <tr>
+                                    <td><a href="Home.php" class="btn btn-warning">Continua
+                                            lo shopping</a></td>
+                                    <td colspan="2" class="hidden-xs"></td>
+                                    <td class="hidden-xs text-center"><strong></strong></td>
+                                    <!---totale-->
+                                    <td><a href="Checkout.php" class="btn btn-primary">Vai alla cassa</a></td>
+                                </tr>
+                                </tfoot>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <div class="col">
+        <div class="container card" style=" width: 18rem;">
+            <h4 class="total">Totale</h4>
+            <hr>
+            <td data-th="totale"><strong>$Prezzo totale</strong></td>
+            <td><a href="Checkout.php" class="btn btn-primary second-btn">Vai alla cassa</a></td><br>
+        </div>
+    </div>
 </div>
-
-
 <footer class="bg-white">
     <div class="py-10 foot">
         <div class="row py-4">

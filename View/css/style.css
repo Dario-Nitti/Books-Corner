@@ -9,7 +9,7 @@ body {
 
 
 .fa-user {
-    margin-left: 900px;
+    margin-left: 40px;
     font-size: 25px;
     color: white;
     margin-top: 15px;
@@ -17,6 +17,17 @@ body {
 
 .fa-user:hover {
     color: darkgrey;
+}
+
+.fa-shopping-cart{
+    margin-left: 850px;
+    font-size: 25px;
+    color: white;
+    margin-top: 15px;
+}
+
+.fa-shopping-cart:hover{
+    color: darkgray;
 }
 
 .bar {
@@ -356,4 +367,12 @@ dropdown {
 
 .send{
     margin-bottom: 20px;
+}
+
+.total{
+    margin-left: 50px;
+}
+
+.second-btn{
+    margin-top: 20px;
 }
