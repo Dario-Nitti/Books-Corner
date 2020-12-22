@@ -1,15 +1,13 @@
-
 <!doctype html>
 
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <title>Contatti</title>
+<title>Prodotto</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
@@ -71,34 +69,74 @@
     </div>
 
 
-
 </header>
 
 <body>
-<div class="container card">
-<form action="mail.php" method="POST" id="actionID">
-    <h2>Contattaci</h2>
-    <p>Hai domande? Non esitare a contattarci direttamente. Il nostro team ti aiuterà.</p>
+
+<!-- /BREADCRUMB -->
+<!-- section -->
+<div class="section">
+    <!-- container -->
+    <div class="container card">
+        <!-- row -->
+        <div class="row">
+            <!--  Product Details -->
+            <div class="product">
+                <div class="row">
+                    <div class="col">
+                        <div class="product-img">
+                            <img src="img/doni.jpg" alt="prduct" width="50%" style="margin-left: 200px; margin-top: 50px;">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product-descr">
+                            <h1>$NomeProdotto</h1>
+                            <br>
+                            <form action="/action_page.php">
+                                <label for="quantity">Quantità:</label>
+                                <input type="number" id="quantity" name="quantity" min="1" max="10"><br><br>
+                                <input class="btn btn-primary" type="submit" value="Acquista">
+                            </form>
+                        </div>
+
+                    </div>
 
 
-            <p><strong>Nome</strong></p>
-            <input type="text" id="name" name="name" class="form-control" placeholder="Nome"><br>
+                </div>
+                <div class="col-md-12">
+                    <div class="product-tab">
+                        <ul class="tab-nav">
+                            <li class="active"><a data-toggle="tab" href="#tab1">Description</a></li>
+                            <li><a data-toggle="tab" href="#tab2">Dettagli</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="tab1" class="tab-pane fade in active">
+                                <p>$Descrizione</p>
+                            </div>
+                            <div id="tab2" class="tab-pane fade in">
+                                <strong>Copertina flessibile: </strong>
+                                <p >$</p>
+                                <strong>Editore: </strong>
+                                <p>$</p>
+                                <strong>Lingua: </strong>
+                                <p>$</p>
+                                <strong>ISBN: </strong>
+                                <p>$</p>
+                                <strong>Peso spedizione: </strong>
+                                <p>$</p>
 
-            <p><strong>Email</strong></p>
-            <input type="email" id="email" name="email" class="form-control" style="width: 100%"
-                   placeholder="La tua Email"><br>
-
-            <p><strong>Messaggio</strong></p>
-            <textarea type="text" id="message" name="message" class="form-control"
-                      placeholder="Inserisci qui il tuo testo"></textarea><br><br>
-
-            <button onclick="InputNull();" class="btn btn-primary send" type="submit" value="Submit">Invia
-            </button>
-
-
-</form>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /Product Details -->
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->
 </div>
-
 
 <footer class="bg-white">
     <div class="py-10 foot">
@@ -126,7 +164,7 @@
                                class="form-control border-0 shadow-0">
                         <div class="input-group-append">
                             <button id="button-addon1" type="submit" class="btn btn-link"><i
-                                    class="fa fa-paper-plane"></i></button>
+                                        class="fa fa-paper-plane"></i></button>
                         </div>
                     </div>
                 </div>
@@ -142,21 +180,5 @@
 
 
 </footer>
-<script>
-    function InputNull() {
-        var input = document.getElementById("name");
-        var input2 = document.getElementById("email");
-        var email = document.getElementById("actionID");
-
-        if (input2.value.length == 0 && input.value.length == 0) {
-            alert("Non hai inserito il tuo nome e la tua email");
-            email.action = "";
-        } else {
-            return true;
-
-
-        }
-    }
-</script>
 </body>
 </html>

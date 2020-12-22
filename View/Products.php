@@ -1,7 +1,6 @@
-
 <!doctype html>
 
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -9,8 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Contatti</title>
-
+<title>Prodotti</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
           integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
@@ -70,36 +68,45 @@
         </div>
     </div>
 
-
-
 </header>
-
 <body>
-<div class="container card">
-<form action="mail.php" method="POST" id="actionID">
-    <h2>Contattaci</h2>
-    <p>Hai domande? Non esitare a contattarci direttamente. Il nostro team ti aiuterà.</p>
-
-
-            <p><strong>Nome</strong></p>
-            <input type="text" id="name" name="name" class="form-control" placeholder="Nome"><br>
-
-            <p><strong>Email</strong></p>
-            <input type="email" id="email" name="email" class="form-control" style="width: 100%"
-                   placeholder="La tua Email"><br>
-
-            <p><strong>Messaggio</strong></p>
-            <textarea type="text" id="message" name="message" class="form-control"
-                      placeholder="Inserisci qui il tuo testo"></textarea><br><br>
-
-            <button onclick="InputNull();" class="btn btn-primary send" type="submit" value="Submit">Invia
-            </button>
-
-
-</form>
+<div class="row">
+    <div class="col-sm-2 search">
+        <input type="text" placeholder="Search..">
+        <button class="btn btn-primary" type="submit"><i class="fa fa-search"></i></button>
+    </div>
+    <div class="col-sm-8">
+        <div class="container card">
+            <h1>$Settore</h1>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <a href="Product-item.php"><img src="http://qnimate.com/wp-content/uploads/2014/03/images2.jpg"
+                                    alt="product-catalog" style="width:20%">
+                        <p><strong>$Nome</strong></p></a>
+                    <p1>$Autore</p1>
+                    <br>
+                    <p2>$prezzo</p2>
+                </div>
+                <div class="grid-item">
+                    <a href="Product-item.php"><img src="http://qnimate.com/wp-content/uploads/2014/03/images2.jpg"
+                                    alt="product-catalog" style="width:20%">
+                        <p><strong>$Nome</strong></p></a>
+                    <p1>$Autore</p1>
+                    <br>
+                    <p2>$prezzo</p2>
+                </div>
+                <div class="grid-item">
+                    <a href="Product-item.php"><img src="http://qnimate.com/wp-content/uploads/2014/03/images2.jpg"
+                                    alt="product-catalog" style="width:20%">
+                        <p><strong>$Nome</strong></p></a>
+                    <p1>Autore$</p1>
+                    <br>
+                    <p2>$prezzo</p2>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-
-
 <footer class="bg-white">
     <div class="py-10 foot">
         <div class="row py-4">
@@ -126,7 +133,7 @@
                                class="form-control border-0 shadow-0">
                         <div class="input-group-append">
                             <button id="button-addon1" type="submit" class="btn btn-link"><i
-                                    class="fa fa-paper-plane"></i></button>
+                                        class="fa fa-paper-plane"></i></button>
                         </div>
                     </div>
                 </div>
@@ -142,21 +149,5 @@
 
 
 </footer>
-<script>
-    function InputNull() {
-        var input = document.getElementById("name");
-        var input2 = document.getElementById("email");
-        var email = document.getElementById("actionID");
-
-        if (input2.value.length == 0 && input.value.length == 0) {
-            alert("Non hai inserito il tuo nome e la tua email");
-            email.action = "";
-        } else {
-            return true;
-
-
-        }
-    }
-</script>
 </body>
 </html>
