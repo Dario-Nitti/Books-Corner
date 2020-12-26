@@ -7,7 +7,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Profilo</title>
+    <title>Upload</title>
 
 
     <!-- Bootstrap CSS -->
@@ -80,25 +80,35 @@
     <div class="row">
         <div class="col-4">
             <h2 class="w3-bar-item side">Menu</h2>
-            <a href="#" id="datac"  class="w3-bar-item w3-button active"><strong>I Miei Dati</strong></a><br>
-            <a href="Order.php" id="orderac"  class="w3-bar-item w3-button"><strong>I Miei Ordini</strong></a><br>
-            <a href="Payment.php" id="payac" class="w3-bar-item w3-button"><strong>Metodi di Pagamento</strong></a><br>
-            <a href="Address.php" id="addressc" class="w3-bar-item w3-button"><strong>In Tuoi
-                    Indirizzi</strong></a><br>
+            <a href="All-Product.php"  class="w3-bar-item w3-button "><strong>Tutti i Prodotti</strong></a><br>
+            <a href="#" class="w3-bar-item w3-button active"><strong>Inserisci un Articolo</strong></a><br>
+
         </div>
         <div class="col-8">
-            <section>
-                <a id="data">
-                    <h2> I Miei Dati</h2><br><br>
-                    <p><strong>${ID}</strong></p>
-                    <p><strong>${Nome e Cognome}</strong></p>
-                    <p><strong>${Email}</strong></p>
-                    <p><strong>${Password}</strong></p>
-                    <p><strong>${Indirizzo}</strong></p>
-                    <p><strong>${Città}</strong></p>
-                    <p><strong>${Cap}</strong></p>
-                </a>
-            </section>
+            <br>
+            <h1 class="new-title">Inserisci Un Nuovo Prodotto</h1><br><br>
+            <div class="new-prod">
+                <p><strong>Nome Articolo:<strong></p>
+                <input class="input" type="text" id="ArticoloName" name="ArticoloName"><br><br>
+                <p><strong>Descrizione:<strong></p>
+                <textarea name="ArticoloDescr" id="ArticoloDescr" rows="4" cols="40"> </textarea><br><br>
+                <p><strong>Editore:<strong></p>
+                <input class="input" type="text" id="ArticoloEditor" name="ArticoloEditor"><br><br>
+                <p><strong>Lingua:<strong></p>
+                <input class="input" type="text" id="ArticoloLang" name="ArticoloLang"><br><br>
+                <p><strong>ISBN:<strong></p>
+                <input class="input" type="text" id="ArticoloISBN" name="ArticoloISBN"><br><br>
+                <p><strong>Categoria:<strong></p>
+                <input class="input" type="text" id="ArticoloCategory" name="ArticoloCategory"><br><br>
+                <!--        <p><strong>Sezione:<strong></p>-->
+                <!--        <input class="input" type="text" id="ArticoloSection" name="ArticoloSection"><br><br>-->
+                <label>Seleziona immagine:</label
+                <form action="/action_page.php">
+                    <input type="file" id="img" name="img" accept="image/*"><br><br>
+                    <input id="upload" class="btn btn-primary" value="Carica" type="submit"><br><br>
+                </form>
+
+            </div>
         </div>
     </div>
 </div>
@@ -130,7 +140,7 @@
                                class="form-control border-0 shadow-0">
                         <div class="input-group-append">
                             <button id="button-addon1" type="submit" class="btn btn-link"><i
-                                    class="fa fa-paper-plane"></i></button>
+                                        class="fa fa-paper-plane"></i></button>
                         </div>
                     </div>
                 </div>

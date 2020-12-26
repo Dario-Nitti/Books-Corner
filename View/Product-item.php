@@ -72,7 +72,7 @@
 </header>
 
 <body>
-
+<br>
 <!-- /BREADCRUMB -->
 <!-- section -->
 <div class="section">
@@ -114,18 +114,12 @@
                                 <p>$Descrizione</p>
                             </div>
                             <div id="tab2" class="tab-pane fade in">
-                                <strong>Copertina flessibile: </strong>
-                                <p >$</p>
                                 <strong>Editore: </strong>
                                 <p>$</p>
                                 <strong>Lingua: </strong>
                                 <p>$</p>
                                 <strong>ISBN: </strong>
                                 <p>$</p>
-                                <strong>Peso spedizione: </strong>
-                                <p>$</p>
-
-                                <p></p>
                             </div>
                         </div>
                     </div>

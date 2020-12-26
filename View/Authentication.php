@@ -74,8 +74,8 @@
 
 <body>
 
-
-<div class="container card">
+<br>
+<div class="container">
     <div class="row">
         <div class="col login">
             <div class="card">

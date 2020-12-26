@@ -70,6 +70,7 @@
 
 </header>
 <body>
+<br>
 <div class="row">
     <div class="col-sm-2 search">
         <input type="text" placeholder="Search..">

@@ -76,7 +76,7 @@
 <body>
 
 
-<
+<br>
 <div class="container card">
     <div class="row">
         <div class="col-4">
@@ -97,17 +97,16 @@
                                 <h4>$Indirizzo</h4>
                             </div>
                             <div class="col-12 col-md-8 option">
-
                                 <a href="#"  id="address" class="btn btn-primary">Elimina Indirizzo</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <br>  <p>Non hai um indirizzo?</p>
-                <button type="button" class="btn btn-link" data-toggle="modal" data-target="#pay"
+                <button type="button" class="btn btn-link" data-toggle="modal" data-target="#address-add"
                         style="margin-left:-15px; margin-top: -10px ">Aggiungi il tuo indirizzo
                 </button><br>
-                <div class="modal fade" id="pay" role="document">
+                <div class="modal fade" id="address-add" role="document">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <h3 class="modal-title">INSERISCI IL TUO INDIRIZZO</h3>
