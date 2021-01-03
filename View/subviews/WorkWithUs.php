@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Error</title>
+    <title>Lavora Con Noi</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
@@ -71,26 +71,27 @@
 
 
 </header>
-<div class="row">
+<br>
+<div class="container">
+    <img src="https://www.aavn.edu.vn/files/Contact Us_Workwithus.png" alt="work"><br><br>
+    <div class="card work" style="width: 90rem;">
+        <div class="card-body">
+            <form action="action.php">
+                <h3><strong>Stiamo cercando nuove persone con cui poter crescere sempre di più</strong></h3>
+                <p>Nome: </p>
+                <input type="text" name="WorkN" id="WorkN" placeholder="Il Tuo Nome"><br><br>
+                <p>Email: </p>
+                <input type="email" name="WorkE" id="WorkE" placeholder="La Tue Email"><br><br>
+                <p>Descriviti: </p>
+                <textarea type="text" id="description" name="descr" class="form-control"
+                          placeholder="Inserisci qui una tua descrizione"></textarea><br><br>
+                <button onclick="InputNull();" class="btn btn-primary send" type="submit" value="Submit">Invia
+                </button>
 
-    <div class="col">
-        <div class="error-img">
-            <img src="../img/error.png" alt="error" width="750" height="750">
-        </div>
-    </div>
-    <div class="col">
-        <div class="error-title">
-            <div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-396ef71ce5d4fd132f64">
-                <div class="sqs-block-content">
-                    <p style="text-align: center; white-space: pre-wrap;">Awww...Don’t Cry.</p>
-                    <h1 style="text-align: center; white-space: pre-wrap;">It's just a 404 Error!</h1>
-                </div>
-            </div>
+            </form>
         </div>
     </div>
 </div>
-
-
 
 
 <footer class="bg-white">
@@ -119,7 +120,7 @@
                                class="form-control border-0 shadow-0">
                         <div class="input-group-append">
                             <button id="button-addon1" type="submit" class="btn btn-link"><i
-                                    class="fa fa-paper-plane"></i></button>
+                                        class="fa fa-paper-plane"></i></button>
                         </div>
                     </div>
                 </div>
@@ -135,6 +136,23 @@
 
 
 </footer>
+<script>
+    function InputNull() {
+        var input = document.getElementById("WorkN");
+        var input2 = document.getElementById("WorkE");
+        var email = document.getElementById("description");
+
+        if (input2.value.length == 0 || input.value.length == 0) {
+            alert("Non hai inserito il tuo nome e la tua email");
+            email.action = "";
+        } else {
+            return true;
+
+
+        }
+    }
+</script>
+
 </body>
 </html>
 
