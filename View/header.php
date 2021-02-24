@@ -23,8 +23,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link href="css/style.css" rel="stylesheet">
-    <script src="js/scripts.js"></script>
+    <link href="../View/css/style.css" rel="stylesheet">
+    <script src="../View/js/scripts.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
@@ -60,9 +60,9 @@
                                 Categorie
                             </a>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                <a class="dropdown-item" id="category" href="Products.php">Avventura</a>
-                                <a class="dropdown-item" id="category" href="Products.php">Fantasy</a>
-                                <a class="dropdown-item" id="category" href="Products.php">Romanzi</a>
+                                <a class="dropdown-item" id="category" href="AllProducts.php">Avventura</a>
+                                <a class="dropdown-item" id="category" href="AllProducts.php">Fantasy</a>
+                                <a class="dropdown-item" id="category" href="AllProducts.php">Romanzi</a>
                             </div>
                         </div>
                     </li>

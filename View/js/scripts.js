@@ -29,6 +29,12 @@ function canc() {
     var nome = document.getElementById("nome").value = '';
     var email = document.getElementById("email-sign").value = '';
     var pass = document.getElementById("password-sign").value = '';
+    var citta = document.getElementById("citta").value = '';
+    var via = document.getElementById("via").value = '';
+    var cap = document.getElementById("cap").value = '';
+
+
+
 
 
 }

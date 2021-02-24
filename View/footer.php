@@ -4,7 +4,7 @@
         <div class="row py-4">
             <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 bottomlogo">
 
-                <img src="img/logo.png" alt="" width="180" class="mb-3">
+                <img src="../View/img/logo.png" alt="" width="180" class="mb-3">
                 <p class="font-italic text-muted">Book's Corner, il tuo sito affidabile </p>
 
             </div>
