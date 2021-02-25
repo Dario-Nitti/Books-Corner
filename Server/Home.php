@@ -46,35 +46,6 @@ include_once "../View/header.php"; ?>
             <br>
             <p2>prezzo</p2>
         </div>
-        <div class="grid-item">
-            <a href=""><img src="../View/img/Viaggi.jpg" alt="poesie" style="width:20%">
-                <p><strong>Viaggi nel tempo</strong></p></a>
-            <p1>James Gleick</p1>
-            <br>
-            <p2>prezzo</p2>
-        </div>
-        <div class="grid-item">
-            <a href=""><img src="../View/img/5.jpg" alt="poesie" style="width:20%">
-                <p><strong>1984</strong></p></a>
-            <p1>George Orwell</p1>
-            <br>
-            <p2>prezzo</p2>
-        </div>
-        <div class="grid-item">
-            <a href=""><img src="../View/img/4.jpg" alt="poesie" style="width:20%">
-                <p><strong>Il codice da Vinci</strong></p></a>
-            <p1>Dan Brown</p1>
-            <br>
-            <p2>prezzo</p2>
-        </div>
-        <div class="grid-item">
-            <a href=""><img src="../View/img/1.jpg" alt="poesie" style="width:20%">
-                <p><strong>La stanza 13</strong></p></a>
-            <p1>Robert Swindells</p1>
-            <br>
-            <p2>prezzo</p2>
-        </div>
-
     </div>
 </div>
 

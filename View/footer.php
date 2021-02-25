@@ -21,13 +21,15 @@
                 <p class="text-muted mb-4">Ricevi la nostra Newsletter.</p>
                 <div class="p-1 rounded border">
                     <div class="input-group">
-                        <input type="email" placeholder="Enter your email address" aria-describedby="button-addon1"
+                        <form action="Utility/MailSender.php" method="post">
+                        <input type="email"  name="newsletter" placeholder="Enter your email address" aria-describedby="button-addon1"
                                class="form-control border-0 shadow-0">
                         <div class="input-group-append">
                             <button id="button-addon1" type="submit" class="btn btn-link"><i
                                         class="fa fa-paper-plane"></i></button>
                         </div>
                     </div>
+                    </form>
                 </div>
             </div>
             <div class="col-lg-2 col-md-6 mb-lg-0 money">
