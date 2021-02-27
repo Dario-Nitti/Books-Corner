@@ -31,13 +31,7 @@ include "../View/header.php";?>
                         <input type="email" id="email-sign" name="Email"><br><br>
                         <p><strong>Password</strong></p>
                         <input type="password" id="password-sign" name="password"><br><br>
-                        <p><strong>Città</strong></p>
-                        <input type="text" id="citta" name="citta"><br><br>
-                        <p><strong>Via</strong></p>
-                        <input type="text" id="via" name="Via"><br><br>
-                        <p><strong>CAP</strong></p>
-                        <input type="text" id="cap" name="CAP"><br><br>
-                        <p id="email" style="color: red"></p>
+                       <p id="email" style="color: red"></p>
                         <input type="submit" onclick="email()" class="btn btn-primary" id="signup-btn"
                                value="Registrati">
                         <button onclick="canc()" type="button" class="btn btn-primary" id="canc">Pulisci</button>
