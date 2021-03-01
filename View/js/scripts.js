@@ -27,6 +27,7 @@ function show() {
 
 function canc() {
     var nome = document.getElementById("nome").value = '';
+    var nome = document.getElementById("cognome").value = '';
     var email = document.getElementById("email-sign").value = '';
     var pass = document.getElementById("password-sign").value = '';
     var citta = document.getElementById("citta").value = '';

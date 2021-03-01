@@ -1,7 +1,9 @@
 
 <?php $title = "Welcome";
+session_start();
 include_once "../View/header.php"; ?>
 <br><br>
+ciao <?php echo $_SESSION['email'];?>
 <div class="container">
     <div class="row">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
