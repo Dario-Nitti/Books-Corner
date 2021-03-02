@@ -2,7 +2,7 @@
 require_once "session.php";
 
 session_start();
-header('location:Login.php');
+
 
 $nome = $_POST['nome'];
 $cognome = $_POST['cognome'];
@@ -17,9 +17,9 @@ $num =mysqli_num_rows($result);
 if ($num == 1) {
     echo "username già presente";
 } else {
-    $reg = "INSERT INTO customer (email,pwd,first_name,last_name) VALUES ('$email', '$hashed_pwd','$nome','$cognome')";
+    $reg = "INSERT INTO customer (email,hashed_pwd,first_name,last_name) VALUES ('$email', '$hashed_pwd','$nome','$cognome')";
     mysqli_query($con, $reg);
-    echo " registrazione avvenuta";
+    header('location:Login.php');
 }
 
 

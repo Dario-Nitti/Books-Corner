@@ -43,7 +43,7 @@
             </div>
             <div class="right">
                 <ul>
-                    <a href="Profile.php" class="fa fa-user" aria-hidden="true"></a>
+                    <a href="Login.php" class="fa fa-user" aria-hidden="true"></a>
                     <a href="Cart.php" class="fas fa-shopping-cart" aria-hidden="true"></a>
                 </ul>
             </div>

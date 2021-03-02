@@ -3,7 +3,6 @@
 session_start();
 include_once "../View/header.php"; ?>
 <br><br>
-ciao <?php echo $_SESSION['email'];?>
 <div class="container">
     <div class="row">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -42,7 +41,7 @@ ciao <?php echo $_SESSION['email'];?>
     <h3>Tutte le nuove uscite subito disponibili!!</h3>
     <div class="grid-container">
         <div class="grid-item">
-            <a href=""><img src="img/robot.jpg" alt="poesie" style="width:20%">
+            <a href=""><img src="../View/img/robot.jpg" alt="poesie" style="width:20%">
                 <p><strong>Io Robot</strong></p></a>
             <p1> Isaac Asimov</p1>
             <br>
