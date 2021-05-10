@@ -1,5 +1,7 @@
 <?php $title = "Profile";
 session_start();
+
+
 include_once "../View/header.php";
 $user = htmlspecialchars($_SESSION['user'], ENT_QUOTES, 'UTF-8');
 ?>
