@@ -2,6 +2,7 @@
 require_once "session.php";
 
 
+
 $email = $_POST['email-log'];
 $pwd = $_POST['password-log'];
 $pwd = hash('sha256', $pwd);

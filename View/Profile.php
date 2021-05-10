@@ -1,8 +1,7 @@
 <?php $title = "Profile";
 session_start();
 include_once "../View/header.php";
- session_start();
-$user= htmlspecialchars($_SESSION['user'], ENT_QUOTES, 'UTF-8');
+$user = htmlspecialchars($_SESSION['user'], ENT_QUOTES, 'UTF-8');
 ?>
 
 
@@ -23,7 +22,7 @@ $user= htmlspecialchars($_SESSION['user'], ENT_QUOTES, 'UTF-8');
         <div class="col-8">
             <section>
                 <a id="data">
-                    <h2> Benvenuto <?php $user?> </h2><br><br>
+                    <h2> Benvenuto <?php echo $user?> </h2><br><br>
                     <p><strong>${ID}</strong></p>
                     <p><strong>${Nome e Cognome}</strong></p>
                     <p><strong>${Email}</strong></p>
