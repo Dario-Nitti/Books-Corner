@@ -1,0 +1,577 @@
+.logo {
+}
+
+body {
+    background: #ebeef0!important;
+    font-family: "Times New Roman", Times, serif;
+
+}
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans|Mountains+of+Christmas&display=swap");
+
+
+
+
+.wrapper .top_nav{
+    width: 100%;
+    height: 65px;
+    background: darkblue;
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrapper .top_nav .left{
+    display: flex;
+    align-items: center;
+}
+
+.wrapper .top_nav .left .logo p{
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    font-family: "Mountains of Christmas", cursive;
+    margin-right: 25px;
+}
+
+.wrapper .top_nav .left .logo p span{
+    color: white;
+    font-family: "Mountains of Christmas", cursive;
+}
+
+.wrapper .top_nav .left .search_bar input[type="text"]{
+    border: 1px solid white;
+    padding: 5px 10px;
+    outline: none;
+    transition: all 0.5s linear;
+}
+
+.wrapper .top_nav .left .search_bar input[type="text"]:focus{
+    width: 250px;
+}
+
+.wrapper .top_nav .right ul{
+    display: flex;
+}
+
+.wrapper .top_nav .right ul li{
+    margin: 0 12px;
+}
+
+.wrapper .top_nav .right ul li:last-child{
+    margin-right: 0;
+    border-radius: 2px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+
+.wrapper .top_nav .right ul a{
+    display: block;
+    padding: 8px 10px;
+    color: white;
+    font-size: 25px;
+}
+
+.wrapper .top_nav .right ul li:last-child a{
+    color: white;
+}
+
+.wrapper .bottom_nav{
+    width: 100%;
+    background: darkblue;
+    height: 30px;
+    padding: 0 50px;
+}
+
+.wrapper .bottom_nav ul{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+}
+
+.wrapper .bottom_nav ul li a{
+    color: white;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+#category{
+    color: black;
+}
+
+
+
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+    color: white;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .prev, .next, .text {
+        font-size: 11px
+    }
+}
+
+.carousel {
+    width: 100%;
+    position: center;
+}
+.bottomlogo{
+    margin-left: 200px;
+    margin-right: -200px;
+}
+.foot {
+    margin-top: 150px;
+    position: center;
+    margin-bottom: 50px;
+}
+
+
+#button-addon1 {
+    color: black;
+}
+
+i {
+    color: black;
+}
+
+.form-control::placeholder {
+    font-size: 0.95rem;
+    color: #aaa;
+    font-style: italic;
+}
+
+.form-control.shadow-0:focus {
+    box-shadow: none;
+}
+
+.visa {
+    font-size: 30px;
+    margin-top: 116px;
+    margin-left: 65px;
+}
+
+.paypal {
+    font-size: 30px;
+    margin-top: 116px;
+
+}
+
+
+.news {
+    background-color: white;
+    margin-top: 30px;
+}
+
+.news > h1 {
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+}
+
+.news > h3 {
+    margin-left: 360px;
+    font-family: "Times New Roman", Times, serif;
+
+}
+
+.grid-item p {
+    color: black;
+    font-size: 25px;
+    text-decoration: none;!important;
+    text-decoration: underline;
+    text-align: center;
+
+}
+
+.grid-item p:hover{
+    color: #717171;
+
+}
+
+
+.grid-item p1 {
+    color: black;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 5px;
+}
+
+.grid-item {
+    padding: 5px;
+    text-align: center;
+}
+
+.card{
+    background-color: white;
+}
+
+.login{
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 15px;
+}
+
+
+
+.register{
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 15px;
+
+
+}
+
+#signup{
+    display: none;
+}
+
+#login{
+    background-color: darkblue;
+    font-size: 17px;
+}
+#signup-btn{
+    background-color: darkblue;
+    font-size: 17px;
+    margin-right: 170px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+
+
+}
+#canc{
+    background-color: darkblue;
+    font-size: 17px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+.active{
+    background-color: transparent;
+}
+.side{
+    margin-left:15px;
+}
+
+#data{
+
+    margin-left: 50px;
+}
+
+.order{
+    -webkit-box-shadow: 1px 1px 1px 1px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow:    1px 1px 1px 1px #ccc;  /* Firefox 3.5 - 3.6 */
+    box-shadow:         1px 1px 1px 1px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+    margin-bottom: 30px;
+}
+
+#delete{
+    margin-left: 350px;
+    margin-top: 90px;
+}
+#price{
+    margin-left: 355px;
+}
+
+
+#address{
+    margin-left: 320px;
+}
+
+dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+#delete{
+    margin-left: 350px;
+    margin-top: 90px;
+}
+#price{
+    margin-left: 355px;
+}
+
+.dropdown-content a:hover
+{background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+.error-title{
+    margin-top: 300px;
+}
+
+.error-img{
+    margin-left: 100px;
+}
+
+.send{
+    margin-bottom: 20px;
+}
+
+.total{
+    margin-left: 50px;
+}
+
+.second-btn{
+    margin-top: 20px;
+}
+
+.address{
+    margin-left: 160px;
+}
+
+.total-check{
+    margin-left: -100px;
+}
+
+#paypal-button-container{
+    width: 200px;
+    height: 250px;
+}
+
+.check{
+    -webkit-box-shadow: 1px 1px 1px 1px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow:    1px 1px 1px 1px #ccc;  /* Firefox 3.5 - 3.6 */
+    box-shadow:         1px 1px 1px 1px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px;
+    -webkit-box-shadow: 1px 1px 1px 1px #717171;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow:    1px 1px 1px 1px #717171;  /* Firefox 3.5 - 3.6 */
+    box-shadow:         1px 1px 1px 1px #717171;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
+
+.item p {
+    color: black;
+    text-decoration: none;!important;
+    text-decoration: underline;
+    text-align: left;
+}
+
+.item p1 {
+    text-align: center;
+}
+
+.card-item{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 10%;
+}
+
+.card-item:hover {
+    box-shadow: 0 8px 16px 0 rgba(1,1,1,1.2);
+}
+
+.container-item {
+    padding: 2px 10px;
+}
+
+.product-tab {
+    margin-top: 30px;
+    color: black;
+}
+
+.product-tab .tab-nav {
+    border-bottom: 1px solid  #ebeef0;
+    margin-bottom: 30px;
+}
+
+.product-tab .tab-nav li {
+    display: inline-block;
+}
+
+.product-tab .tab-nav li + li {
+    margin-left: 30px;
+    color: black;
+}
+
+.product-tab .tab-nav li a {
+    display: block;
+    padding: 15px 0px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.product-tab .tab-nav li.active {
+    position: relative;
+}
+
+
+
+.product-tab .tab-nav li.active a:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1.5px;
+    height: 3px;
+    width: 30px;
+    background-color: black;
+}
+
+/*Product*/
+
+.product-descr{
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+
+.search{
+    margin-left: 10px;
+    margin-top: 100px;
+}
+#upload {
+    margin-left: 300px;
+}
+
+#delete-prod{
+    margin-top: 50px;
+}
+#modif{
+    margin-top: 50px;
+}
+
+.all-prod{
+-webkit-box-shadow: 1px 1px 1px 1px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+-moz-box-shadow:    1px 1px 1px 1px #ccc;  /* Firefox 3.5 - 3.6 */
+box-shadow:         1px 1px 1px 1px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+margin-bottom: 30px;
+}
+
+.work{
+    margin-left: 100px;
+}
+
+.utente{
+    color:white;
+    background-color:#e6b800;
+    border-radius: 4px;
+    height: 80px;
+    font-weight: bold;
+    padding-left:32px;
+    padding-top:7px;
+    margin-top: 7px;
+}
