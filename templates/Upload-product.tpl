@@ -1,8 +1,4 @@
-<?php $title = "Inserisci prodotti";
-session_start();
-include_once "../View/header.html";
-$user= htmlspecialchars($_SESSION['user'], ENT_QUOTES, 'UTF-8');
-?>
+{include file="header.tpl" title="Accedi o Registrati"}
 
 <body>
 
@@ -46,4 +42,4 @@ $user= htmlspecialchars($_SESSION['user'], ENT_QUOTES, 'UTF-8');
 </div>
 
 </body>
-<?php include_once "../View/footer.html";?>
+{include file="footer.tpl"}

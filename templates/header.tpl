@@ -51,7 +51,7 @@
         <div class="bottom_nav">
             <div class="container">
                 <ul>
-                    <li><a class="nav-link" href="./templates/Home.php">Home<span class="sr-only">(current)</span></a></li>
+                    <li><a class="nav-link" href="/Books-Corner">Home<span class="sr-only">(current)</span></a></li>
                     <li>
                         <div class="dropdown">
                             <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"

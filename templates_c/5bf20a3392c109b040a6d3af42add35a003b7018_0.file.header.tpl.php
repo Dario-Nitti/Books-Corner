@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-06-03 11:22:46
+/* Smarty version 3.1.39, created on 2021-06-03 17:15:46
   from 'C:\xampp\htdocs\Books-Corner\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_60b89f66b880a4_00457283',
+  'unifunc' => 'content_60b8f222eb88e6_18379127',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5bf20a3392c109b040a6d3af42add35a003b7018' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Books-Corner\\templates\\header.tpl',
-      1 => 1622712165,
+      1 => 1622733344,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_60b89f66b880a4_00457283 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60b8f222eb88e6_18379127 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 
 <html lang="en">
@@ -87,7 +87,7 @@ function content_60b89f66b880a4_00457283 (Smarty_Internal_Template $_smarty_tpl)
         <div class="bottom_nav">
             <div class="container">
                 <ul>
-                    <li><a class="nav-link" href="./templates/Home.php">Home<span class="sr-only">(current)</span></a></li>
+                    <li><a class="nav-link" href="/Books-Corner">Home<span class="sr-only">(current)</span></a></li>
                     <li>
                         <div class="dropdown">
                             <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
