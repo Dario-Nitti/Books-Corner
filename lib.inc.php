@@ -11,6 +11,15 @@ function includesmarty()
 
     return $smarty;
 }
+function checkSessione()
+{
+    session_regenerate_id(TRUE);
+    if (!isset($_SESSION['user'] ) )
+    {
+        header('location: Login.php');
+        exit;
+    }
+}
 
 
 

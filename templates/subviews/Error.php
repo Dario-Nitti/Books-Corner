@@ -41,7 +41,7 @@
             <div class="right">
                 <ul>
                     <a href="../Profile.tpl" class="fa fa-user" aria-hidden="true"></a>
-                    <a href="../Cart.html" class="fas fa-shopping-cart" aria-hidden="true"></a>
+                    <a href="../Cart.tpl" class="fas fa-shopping-cart" aria-hidden="true"></a>
                 </ul>
             </div>
         </div>

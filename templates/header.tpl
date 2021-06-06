@@ -44,7 +44,6 @@
             <div class="right">
                 <ul>
                     <a href="/Books-Corner/Login.php" class="fa fa-user" aria-hidden="true"></a>
-                    <a href="Cart.html" class="fas fa-shopping-cart" aria-hidden="true"></a>
                 </ul>
             </div>
         </div>

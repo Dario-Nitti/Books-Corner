@@ -1,5 +1,4 @@
 {include file="header.tpl" title="Accedi o Registrati"}
-
 <br>
 <div class="container">
     <div class="row">

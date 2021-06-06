@@ -1,15 +1,25 @@
 <?php
+
 include "lib.inc.php";
 $smarty = includesmarty();
-if (!isset($_SESSION['user'] ) and !isset($_SESSION['password'] ) )
-{
-    header('location:Login.php');
+
+if (!isset($_SESSION['user'])){
+    $smarty->display("Login.tpl");
     exit;
 }else{
-    header("location:profile.php");
+    header("Location:profile.php");
 }
 
-$smarty->display("Login.tpl");
+
+
+
+
+
+
+
+
+
+
 
 
 

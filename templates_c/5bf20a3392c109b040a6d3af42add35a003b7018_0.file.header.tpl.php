@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-06-03 17:15:46
+/* Smarty version 3.1.39, created on 2021-06-06 15:55:12
   from 'C:\xampp\htdocs\Books-Corner\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_60b8f222eb88e6_18379127',
+  'unifunc' => 'content_60bcd3c0442161_94682827',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5bf20a3392c109b040a6d3af42add35a003b7018' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Books-Corner\\templates\\header.tpl',
-      1 => 1622733344,
+      1 => 1622987711,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_60b8f222eb88e6_18379127 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60bcd3c0442161_94682827 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 
 <html lang="en">
@@ -80,7 +80,6 @@ function content_60b8f222eb88e6_18379127 (Smarty_Internal_Template $_smarty_tpl)
             <div class="right">
                 <ul>
                     <a href="/Books-Corner/Login.php" class="fa fa-user" aria-hidden="true"></a>
-                    <a href="Cart.html" class="fas fa-shopping-cart" aria-hidden="true"></a>
                 </ul>
             </div>
         </div>

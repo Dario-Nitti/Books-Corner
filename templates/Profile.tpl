@@ -8,16 +8,19 @@
     <div class="row">
         <div class="col-4">
             <h2 class="w3-bar-item side">Menu</h2>
-            <a href="#" id="datac"  class="w3-bar-item w3-button active"><strong>I Miei Dati</strong></a><br>
+            <a href="#" id="datac" class="w3-bar-item w3-button active"><strong>I Miei Dati</strong></a><br>
             <a href="Order.html" id="orderac" class="w3-bar-item w3-button"><strong>I Miei Ordini</strong></a><br>
-<!--            <a href="Payment.php" id="payac" class="w3-bar-item w3-button"><strong>Metodi di Pagamento</strong></a><br>-->
+            <!--            <a href="Payment.php" id="payac" class="w3-bar-item w3-button"><strong>Metodi di Pagamento</strong></a><br>-->
             <a href="Address.html" id="addressc" class="w3-bar-item w3-button"><strong>In Tuoi
                     Indirizzi</strong></a><br>
+            <a href="Cart.php" id="Logout" class="w3-bar-item w3-button"><strong>Carello</strong></a><br>
+
+            <a href="Logout.php" id="Logout" class="w3-bar-item w3-button"><strong>Logout</strong></a><br>
         </div>
         <div class="col-8">
             <section>
                 <a id="data">
-                    <h2> Benvenuto</h2><br><br>
+                    <h2> Benvenuto {$user}</h2><br><br>
                     <p><strong>ID</strong></p>
                     <p><strong>Nome e Cognome</strong></p>
                     <p><strong>Email</strong></p>

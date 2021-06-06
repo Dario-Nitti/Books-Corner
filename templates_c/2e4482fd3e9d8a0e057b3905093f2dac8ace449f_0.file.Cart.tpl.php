@@ -1,10 +1,32 @@
-<?php $title = "Carrello";
-session_start();
-include_once "../View/header.php";
-$user = htmlspecialchars($_SESSION['user'], ENT_QUOTES, 'UTF-8');
+<?php
+/* Smarty version 3.1.39, created on 2021-06-06 15:39:32
+  from 'C:\xampp\htdocs\Books-Corner\templates\Cart.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.39',
+  'unifunc' => 'content_60bcd01430cef3_53925900',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '2e4482fd3e9d8a0e057b3905093f2dac8ace449f' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\Books-Corner\\templates\\Cart.tpl',
+      1 => 1622986520,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:header.tpl' => 1,
+    'file:footer.tpl' => 1,
+  ),
+),false)) {
+function content_60bcd01430cef3_53925900 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('title'=>"Carrello"), 0, false);
 ?>
 
-<body>
+
 <br>
 <div class="row">
     <div class="col-10">
@@ -76,7 +98,9 @@ $user = htmlspecialchars($_SESSION['user'], ENT_QUOTES, 'UTF-8');
     </div>
 </div>
 
-<?php include_once "../View/footer.php";?>
+<?php $_smarty_tpl->_subTemplateRender("file:footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
 
-</body>
-</html>
+
+<?php }
+}
