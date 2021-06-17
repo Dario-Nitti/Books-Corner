@@ -65,7 +65,7 @@
                             </div>
                         </div>
                     </li>
-                    <li><a class="nav-link" href="Contact.html">Contatti</a></li>
+                    <li><a class="nav-link" href="Contact.tpl">Contatti</a></li>
                 </ul>
             </div>
         </div>

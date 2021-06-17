@@ -9,9 +9,8 @@
         <div class="col-4">
             <h2 class="w3-bar-item side">Menu</h2>
             <a href="#" id="datac" class="w3-bar-item w3-button active"><strong>I Miei Dati</strong></a><br>
-            <a href="Order.html" id="orderac" class="w3-bar-item w3-button"><strong>I Miei Ordini</strong></a><br>
-            <!--            <a href="Payment.php" id="payac" class="w3-bar-item w3-button"><strong>Metodi di Pagamento</strong></a><br>-->
-            <a href="Address.html" id="addressc" class="w3-bar-item w3-button"><strong>In Tuoi
+            <a href="Order.php" id="orderac" class="w3-bar-item w3-button"><strong>I Miei Ordini</strong></a><br>
+            <a href="Address.tpl" id="addressc" class="w3-bar-item w3-button"><strong>In Tuoi
                     Indirizzi</strong></a><br>
             <a href="Cart.php" id="Logout" class="w3-bar-item w3-button"><strong>Carello</strong></a><br>
 

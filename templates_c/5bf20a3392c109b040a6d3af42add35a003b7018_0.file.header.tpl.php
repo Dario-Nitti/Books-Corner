@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-06-06 15:55:12
+/* Smarty version 3.1.39, created on 2021-06-09 10:41:32
   from 'C:\xampp\htdocs\Books-Corner\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_60bcd3c0442161_94682827',
+  'unifunc' => 'content_60c07ebcbd8cb0_85428859',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5bf20a3392c109b040a6d3af42add35a003b7018' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Books-Corner\\templates\\header.tpl',
-      1 => 1622987711,
+      1 => 1623227255,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_60bcd3c0442161_94682827 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60c07ebcbd8cb0_85428859 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 
 <html lang="en">
@@ -101,7 +101,7 @@ function content_60bcd3c0442161_94682827 (Smarty_Internal_Template $_smarty_tpl)
                             </div>
                         </div>
                     </li>
-                    <li><a class="nav-link" href="Contact.html">Contatti</a></li>
+                    <li><a class="nav-link" href="Contact.tpl">Contatti</a></li>
                 </ul>
             </div>
         </div>

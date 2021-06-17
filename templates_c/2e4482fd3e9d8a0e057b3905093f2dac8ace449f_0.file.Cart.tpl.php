@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-06-06 15:39:32
+/* Smarty version 3.1.39, created on 2021-06-09 11:46:10
   from 'C:\xampp\htdocs\Books-Corner\templates\Cart.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_60bcd01430cef3_53925900',
+  'unifunc' => 'content_60c08de2202af4_07897477',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2e4482fd3e9d8a0e057b3905093f2dac8ace449f' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Books-Corner\\templates\\Cart.tpl',
-      1 => 1622986520,
+      1 => 1623231703,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_60bcd01430cef3_53925900 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60c08de2202af4_07897477 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('title'=>"Carrello"), 0, false);
 ?>
 
@@ -78,7 +78,7 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
                                     <td colspan="2" class="hidden-xs"></td>
                                     <td class="hidden-xs text-center"><strong></strong></td>
                                     <!---totale-->
-                                    <td><a href="Checkout.html" class="btn btn-primary">Vai alla cassa</a></td>
+                                    <td><a href="Checkout.tpl" class="btn btn-primary">Vai alla cassa</a></td>
                                 </tr>
                                 </tfoot>
                             </table>
@@ -93,7 +93,7 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
             <h4 class="total">Totale</h4>
             <hr>
             <td data-th="totale"><strong>$Prezzo totale</strong></td>
-            <td><a href="Checkout.html" class="btn btn-primary second-btn">Vai alla cassa</a></td><br>
+            <td><a href="Checkout.tpl" class="btn btn-primary second-btn">Vai alla cassa</a></td><br>
         </div>
     </div>
 </div>

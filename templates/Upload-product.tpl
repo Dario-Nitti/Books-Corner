@@ -7,7 +7,7 @@
     <div class="row">
         <div class="col-4">
             <h2 class="w3-bar-item side">Menu</h2>
-            <a href="All-Product.html" class="w3-bar-item w3-button "><strong>Tutti i Prodotti</strong></a><br>
+            <a href="All-Product.tpl" class="w3-bar-item w3-button "><strong>Tutti i Prodotti</strong></a><br>
             <a href="#" class="w3-bar-item w3-button active"><strong>Inserisci un Articolo</strong></a><br>
             <a href="Users_Man.html" class="w3-bar-item w3-button active"><strong>Gestione Utenti</strong></a><br>
 

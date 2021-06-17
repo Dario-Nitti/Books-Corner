@@ -52,7 +52,7 @@
                                     <td colspan="2" class="hidden-xs"></td>
                                     <td class="hidden-xs text-center"><strong></strong></td>
                                     <!---totale-->
-                                    <td><a href="Checkout.html" class="btn btn-primary">Vai alla cassa</a></td>
+                                    <td><a href="Checkout.tpl" class="btn btn-primary">Vai alla cassa</a></td>
                                 </tr>
                                 </tfoot>
                             </table>
@@ -67,7 +67,7 @@
             <h4 class="total">Totale</h4>
             <hr>
             <td data-th="totale"><strong>$Prezzo totale</strong></td>
-            <td><a href="Checkout.html" class="btn btn-primary second-btn">Vai alla cassa</a></td><br>
+            <td><a href="Checkout.tpl" class="btn btn-primary second-btn">Vai alla cassa</a></td><br>
         </div>
     </div>
 </div>

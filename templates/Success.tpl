@@ -3,7 +3,7 @@
     <title></title>
 
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/success-page.css">
+    <link rel="stylesheet" href="./templates/css/success-page.css">
 </head>
 
 <body>
@@ -13,7 +13,7 @@
     </div>
     <h1>Success</h1>
     <p>Operazione eseguita con successo<br/></p>
-    <a href="../Home.php"><button class="primary-btn">Continua i tuoi acquisti</button></a>
+    <a href="/Books-Corner/index.php"><button class="primary-btn">Continua i tuoi acquisti</button></a>
 
 </div>
 </body>

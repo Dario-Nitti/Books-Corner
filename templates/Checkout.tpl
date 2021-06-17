@@ -49,7 +49,7 @@ $user = htmlspecialchars($_SESSION['user'], ENT_QUOTES, 'UTF-8');
                 <h4 class="total">Totale</h4>
                 <hr>
                 <td data-th="totale"><strong>$Prezzo totale</strong></td>
-                <td><a href="Checkout.html" class="btn btn-primary second-btn">Acquista</a></td>
+                <td><a href="Checkout.tpl" class="btn btn-primary second-btn">Acquista</a></td>
                 <br>
             </div>
         </div>

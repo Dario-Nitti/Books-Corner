@@ -1,5 +1,5 @@
 
-{include file="header.tpl" title="Home"}
+{include file="header.tpl" title="Benvenuto"}
 <div class="container">
     <div class="row">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">

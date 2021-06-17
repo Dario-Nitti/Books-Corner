@@ -1,8 +1,5 @@
-<?php $title = "Ordine";
-session_start();
-include_once "../View/header.html";
-$user = htmlspecialchars($_SESSION['user'], ENT_QUOTES, 'UTF-8');
-?>
+{include file="header.tpl" title="ordini"}
+
 
 <body>
 
@@ -11,12 +8,13 @@ $user = htmlspecialchars($_SESSION['user'], ENT_QUOTES, 'UTF-8');
     <div class="row">
         <div class="col-4">
             <h2 class="w3-bar-item side">Menu</h2>
-            <a href="Profile.tpl" id="datac" class="w3-bar-item w3-button "><strong>I Miei Dati</strong></a><br>
-            <a href="#" id="orderac" class="w3-bar-item w3-button active"><strong>I Miei
-                    Ordini</strong></a><br>
-            <a href="Payment.html" id="payac" class="w3-bar-item w3-button"><strong>Metodi di Pagamento</strong></a><br>
-            <a href="Address.html" id="addressc" class="w3-bar-item w3-button"><strong>In Tuoi
+            <a href="profile.php" id="datac" class="w3-bar-item w3-button active"><strong>I Miei Dati</strong></a><br>
+            <a href="#" id="orderac" class="w3-bar-item w3-button"><strong>I Miei Ordini</strong></a><br>
+            <a href="Address.php" id="addressc" class="w3-bar-item w3-button"><strong>In Tuoi
                     Indirizzi</strong></a><br>
+            <a href="Cart.php" id="Logout" class="w3-bar-item w3-button"><strong>Carello</strong></a><br>
+
+            <a href="Logout.php" id="Logout" class="w3-bar-item w3-button"><strong>Logout</strong></a><br>
         </div>
         <div class="col-8">
             <section>
@@ -40,7 +38,7 @@ $user = htmlspecialchars($_SESSION['user'], ENT_QUOTES, 'UTF-8');
 </div>
 
 
-<?php include_once "../View/footer.html";?>
+{include file="footer.tpl"}
 
 </body>
 </html>

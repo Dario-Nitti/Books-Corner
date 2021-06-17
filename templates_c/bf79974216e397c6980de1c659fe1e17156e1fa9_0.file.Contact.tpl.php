@@ -1,13 +1,35 @@
-<?php $title = "Contatti";
-session_start();
-include_once "../View/header.php";
-$user = htmlspecialchars($_SESSION['user'], ENT_QUOTES, 'UTF-8');
+<?php
+/* Smarty version 3.1.39, created on 2021-06-09 12:18:10
+  from 'C:\xampp\htdocs\Books-Corner\templates\Contact.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.39',
+  'unifunc' => 'content_60c095621c89e1_57718541',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'bf79974216e397c6980de1c659fe1e17156e1fa9' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\Books-Corner\\templates\\Contact.tpl',
+      1 => 1623233813,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:header.tpl' => 1,
+    'file:footer.tpl' => 1,
+  ),
+),false)) {
+function content_60c095621c89e1_57718541 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('title'=>"Contatti"), 0, false);
 ?>
 
 <body>
 <br>
 <div class="container card">
-<form action="mail.php" method="POST" id="actionID">
+<form action="Mailer.php" method="POST" id="actionID">
     <h2>Contattaci</h2>
     <p>Hai domande? Non esitare a contattarci direttamente. Il nostro team ti aiuterà.</p>
 
@@ -29,10 +51,12 @@ $user = htmlspecialchars($_SESSION['user'], ENT_QUOTES, 'UTF-8');
 
 </form>
 </div>
+<?php $_smarty_tpl->_subTemplateRender("file:footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
 
-<?php include_once "../View/footer.html";?>
 
-<script>
+<?php echo '<script'; ?>
+>
     function InputNull() {
         var input = document.getElementById("name");
         var input2 = document.getElementById("email");
@@ -47,6 +71,9 @@ $user = htmlspecialchars($_SESSION['user'], ENT_QUOTES, 'UTF-8');
 
         }
     }
-</script>
+<?php echo '</script'; ?>
+>
 </body>
 </html>
+<?php }
+}

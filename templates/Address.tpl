@@ -14,8 +14,7 @@ $user = htmlspecialchars($_SESSION['user'], ENT_QUOTES, 'UTF-8');
         <div class="col-4">
             <h2 class="w3-bar-item side">Menu</h2>
             <a href="Profile.tpl" id="datac" class="w3-bar-item w3-button "><strong>I Miei Dati</strong></a><br>
-            <a href="Order.html" id="orderac" class="w3-bar-item w3-button active"><strong>I Miei Ordini</strong></a><br>
-            <a href="Payment.html" id="payac" class="w3-bar-item w3-button"><strong>Metodi di Pagamento</strong></a><br>
+            <a href="Order.tpl" id="orderac" class="w3-bar-item w3-button active"><strong>I Miei Ordini</strong></a><br>
             <a href="#" id="addressc" class="w3-bar-item w3-button"><strong>In Tuoi
                     Indirizzi</strong></a><br>
         </div>
