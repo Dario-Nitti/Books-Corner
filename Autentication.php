@@ -41,7 +41,7 @@ if ($num == 1) {
         session_regenerate_id();
         $_SESSION['id'] = session_id();
         $_SESSION['user'] = $email;
-        header('location:Upload-product.tpl');
+        header('location:Upload-product.php');
     } else {
         echo "Username e Password errate!!";
         $smarty->assign("logged", false);

@@ -1,4 +1,30 @@
-{include file="header.tpl" title="Carica il prodotto"}
+<?php
+/* Smarty version 3.1.39, created on 2021-07-09 10:16:35
+  from 'C:\xampp\htdocs\Books-Corner\templates\Upload-product.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.39',
+  'unifunc' => 'content_60e805e3d28385_81145858',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '5aa8829ab6c09475fc35e1df8fb244e888d1b24b' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\Books-Corner\\templates\\Upload-product.tpl',
+      1 => 1625818593,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:header.tpl' => 1,
+    'file:footer.tpl' => 1,
+  ),
+),false)) {
+function content_60e805e3d28385_81145858 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('title'=>"Carica il prodotto"), 0, false);
+?>
 
 <body>
 
@@ -48,4 +74,6 @@
 </div>
 
 </body>
-{include file="footer.tpl"}
+<?php $_smarty_tpl->_subTemplateRender("file:footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+}
+}
