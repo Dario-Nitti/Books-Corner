@@ -1,13 +1,6 @@
-<?php $title = "Product";
-session_start();
+{include file="header.tpl" title="Prodotto"}
 
 
-include_once "../View/header.html";
-//$user = htmlspecialchars($_SESSION['user'], ENT_QUOTES, 'UTF-8');
-?>
-
-
-<body>
 <br>
 <!-- /BREADCRUMB -->
 <!-- section -->
@@ -21,19 +14,32 @@ include_once "../View/header.html";
                 <div class="row">
                     <div class="col">
                         <div class="product-img">
-                            <img src="img/doni.jpg" alt="prduct" width="50%" style="margin-left: 200px; margin-top: 50px;">
+                            <img src="{$book.pic}" alt="prduct" width="50%"
+                                 style="margin-left: 200px; margin-top: 50px;">
                         </div>
                     </div>
                     <div class="col">
                         <div class="product-descr">
-                            <h1>$NomeProdotto</h1>
+                            <h1>{$book.title}</h1>
                             <br>
-                            <form action="/action_page.php">
-                                <label for="quantity">Quantità:</label>
-                                <input type="number" id="quantity" name="quantity" min="1" max="10"><br><br>
+                            <form action="Add-Cart.php" method="post">
+                                <label for="quantity">Disponibilità: {$book.quantity}</label>
+                                <input class="input" type="number" id="quantita" name="quantita" min="0"
+                                       max="{$book.quantity}"><br><br>
+                                <input type="hidden" name="price" value={$book.price}>
+                                <input type="hidden" name="id_book" value={$book.id}>
                                 <input class="btn btn-primary" type="submit" value="Acquista">
-                                <input class="btn btn-primary" type="submit" value="Metti nella lista dei desideri">
                             </form>
+                            <br>
+                            <h3>{$book.price} €</h3>
+                            <br><br>
+                            <form action="Add-Whislist.php" method="post">
+                                <input type="hidden" name="id_book" value={$book.id}>
+                                <input type="hidden" name="name" value={$category.name}>
+                                <input class="btn btn-primary" type="submit" value="Metti nella lista dei desideri">
+
+                            </form>
+
                         </div>
 
                     </div>
@@ -50,8 +56,9 @@ include_once "../View/header.html";
                             <div id="tab1" class="tab-pane fade in active">
                                 <form action="review.php">
                                     <input type="text" id="review" name="review">
-                                    <input class="btn btn-primary" type="submit" value="Aggiungi rece">
-                                </form><br><br>
+                                    <input class="btn btn-primary" type="submit" value="Aggiungi recensione">
+                                </form>
+                                <br><br>
                                 <div class="review">
                                     <strong>Nome utente </strong>
                                     <p>  <?php echo "Data" ?></p>
@@ -62,15 +69,15 @@ include_once "../View/header.html";
                             </div>
                             <div id="tab2" class="tab-pane fade in">
                                 <strong>Autore: </strong>
-                                <p>  <?php echo "$" ?></p>
+                                <p>  {$author.first_name} {$author.last_name}</p>
                                 <strong>Data pubblicazione: </strong>
-                                <p>  <?php echo "$" ?></p>
+                                <p> {$book.pub_date}</p>
                                 <strong>ISBN: </strong>
-                                <p>  <?php echo "$" ?></p>
+                                <p>  {$book.isbn}</p>
                                 <strong>Edizione: </strong>
-                                <p>  <?php echo "$" ?></p>
+                                <p>  {$book.edition}</p>
                                 <strong>Categoria: </strong>
-                                <p>  <?php echo "$" ?></p>
+                                <p>  {$category.name}</p>
                             </div>
                         </div>
                     </div>
@@ -83,7 +90,5 @@ include_once "../View/header.html";
     <!-- /container -->
 </div>
 
-<?php include_once "../View/footer.html";?>
+{include file="footer.tpl"}
 
-</body>
-</html>

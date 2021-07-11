@@ -1,5 +1,5 @@
 <?php
-
+include "lib.inc.php";
 
 $nome = $_POST['nome'];
 $cognome = $_POST['cognome'];

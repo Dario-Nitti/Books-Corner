@@ -1,11 +1,13 @@
 <?php
 include "lib.inc.php";
 $smarty = includesmarty();
-//$sql = "SELECT * FROM book ORDER BY rand() limit 5";
-////$result = mysqli_query($sql);
+$book_list = "SELECT * FROM book";
+$result = mysqli_query($con,$book_list);
+$book=array();
+while ($book = mysqli_fetch_array($result)) {
+    $books[] = $book;
+}
+$smarty->assign("books", $books);
 $smarty->display("Home.tpl");
-//while ($resrow = mysqli_fetch_object($result))
-//    $books[]=array("titolo"=>utf8_encode($resrow->titolo),img);
-//$smarty->assign("books",$books);
 $smarty->display("index.tpl.html");
 ?>

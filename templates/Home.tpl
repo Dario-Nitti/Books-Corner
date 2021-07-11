@@ -1,4 +1,3 @@
-
 {include file="header.tpl" title="Benvenuto"}
 <div class="container">
     <div class="row">
@@ -37,13 +36,12 @@
     <h1> TUTTE LE NOVITÀ</h1>
     <h3>Tutte le nuove uscite subito disponibili!!</h3>
     <div class="grid-container">
-        <div class="grid-item">
-            <a href=""><img src="./templates/img/robot.jpg" alt="poesie" style="width:20%">
-                <p><strong>Io Robot</strong></p></a>
-            <p1> Isaac Asimov</p1>
-            <br>
-            <p2>prezzo</p2>
-        </div>
+        {foreach from=$books item="book"}
+            <div class="grid-item">
+                <a href="Product-item.php?id={$book.id}"><img src="{$book.pic}"  style="width:20%">
+                    <p><strong>{$book.title}</strong></p></a>
+            </div>
+        {/foreach}
     </div>
 </div>
 

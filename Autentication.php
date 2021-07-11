@@ -11,16 +11,20 @@ $pwd = hash('sha256', $pwd);
 
 $email = mysqli_real_escape_string($con, $email);
 $pwd = mysqli_real_escape_string($con, $pwd);
-$log = "SELECT * FROM customer WHERE email='$email' AND hashed_pwd='$pwd'";
+$log = "SELECT id FROM customer WHERE email='$email' AND hashed_pwd='$pwd'";
 $result = mysqli_query($con, $log);
-
-
+$row = mysqli_fetch_array($result);
 $num = mysqli_num_rows($result);
+$user_id=$row['id'];
+
 
 
 if ($num == 1) {
     $_SESSION['logged_in'] = true;
+    $_SESSION['id'] = $row["id"];
     $_SESSION['user'] = $email;
+    $_SESSION['customer_id']=$user_id;
+
     $smarty->assign("logged",true);
     header('location:Profile.php');
 } else {

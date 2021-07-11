@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-06-09 11:35:32
+/* Smarty version 3.1.39, created on 2021-07-09 18:02:50
   from 'C:\xampp\htdocs\Books-Corner\templates\Home.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_60c08b648df494_58660612',
+  'unifunc' => 'content_60e8732a15e598_88091857',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1e6f079f4d4d13cff8b6b0e74449a6407c205e36' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Books-Corner\\templates\\Home.tpl',
-      1 => 1623228217,
+      1 => 1625846569,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_60c08b648df494_58660612 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60e8732a15e598_88091857 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('title'=>"Benvenuto"), 0, false);
 ?>
 <div class="container">
@@ -62,13 +62,22 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
     <h1> TUTTE LE NOVITÀ</h1>
     <h3>Tutte le nuove uscite subito disponibili!!</h3>
     <div class="grid-container">
-        <div class="grid-item">
-            <a href=""><img src="./templates/img/robot.jpg" alt="poesie" style="width:20%">
-                <p><strong>Io Robot</strong></p></a>
-            <p1> Isaac Asimov</p1>
-            <br>
-            <p2>prezzo</p2>
-        </div>
+        <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['books']->value, 'book');
+$_smarty_tpl->tpl_vars['book']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['book']->value) {
+$_smarty_tpl->tpl_vars['book']->do_else = false;
+?>
+            <div class="grid-item">
+                <a href="Product-item.php?id=<?php echo $_smarty_tpl->tpl_vars['book']->value['id'];?>
+"><img src="<?php echo $_smarty_tpl->tpl_vars['book']->value['pic'];?>
+"  style="width:20%">
+                    <p><strong><?php echo $_smarty_tpl->tpl_vars['book']->value['title'];?>
+</strong></p></a>
+            </div>
+        <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     </div>
 </div>
 
