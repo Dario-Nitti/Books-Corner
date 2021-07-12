@@ -16,6 +16,7 @@ $result = mysqli_query($con, $log);
 $row = mysqli_fetch_array($result);
 $num = mysqli_num_rows($result);
 $user_id=$row['id'];
+$name_user=$row['first_name'];
 
 
 
@@ -24,6 +25,7 @@ if ($num == 1) {
     $_SESSION['id'] = $row["id"];
     $_SESSION['user'] = $email;
     $_SESSION['customer_id']=$user_id;
+    $_SESSION['user_name']=$row["first_name"];
 
     $smarty->assign("logged",true);
     header('location:Profile.php');

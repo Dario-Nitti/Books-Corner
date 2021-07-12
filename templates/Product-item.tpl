@@ -35,7 +35,6 @@
                             <br><br>
                             <form action="Add-Whislist.php" method="post">
                                 <input type="hidden" name="id_book" value={$book.id}>
-                                <input type="hidden" name="name" value={$category.name}>
                                 <input class="btn btn-primary" type="submit" value="Metti nella lista dei desideri">
 
                             </form>

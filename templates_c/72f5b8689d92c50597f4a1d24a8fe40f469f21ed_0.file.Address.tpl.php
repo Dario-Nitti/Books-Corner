@@ -1,4 +1,30 @@
-{include file="header.tpl" title="Indirizzo"}
+<?php
+/* Smarty version 3.1.39, created on 2021-07-12 17:59:50
+  from 'C:\xampp\htdocs\Books-Corner\templates\Address.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.39',
+  'unifunc' => 'content_60ec66f68ab417_72892202',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '72f5b8689d92c50597f4a1d24a8fe40f469f21ed' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\Books-Corner\\templates\\Address.tpl',
+      1 => 1626105584,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:header.tpl' => 1,
+    'file:footer.tpl' => 1,
+  ),
+),false)) {
+function content_60ec66f68ab417_72892202 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('title'=>"Indirizzo"), 0, false);
+?>
 
 <br>
 <div class="container card">
@@ -16,18 +42,25 @@
         <div class="col-8">
             <section>
                 <h3 class="card-title">I Tuoi Indirizzi</h3>
-                {if !empty($addresses)}
-                {foreach from=$addresses item="addr"}
+                <?php if (!empty($_smarty_tpl->tpl_vars['addresses']->value)) {?>
+                <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['addresses']->value, 'addr');
+$_smarty_tpl->tpl_vars['addr']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['addr']->value) {
+$_smarty_tpl->tpl_vars['addr']->do_else = false;
+?>
                     <div class="order card">
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-6 col-md-4">
-                                    <h4>{$addr.street}</h4>
+                                    <h4><?php echo $_smarty_tpl->tpl_vars['addr']->value['street'];?>
+</h4>
                                 </div>
 
                                 <div class="col-12 col-md-8 option">
                                     <form method="post" action="del_addr.php">
-                                        <input type="hidden" name="id_addr" value="{$addr.id}">
+                                        <input type="hidden" name="id_addr" value="<?php echo $_smarty_tpl->tpl_vars['addr']->value['id'];?>
+">
                                         <input class="btn btn-primary" type="submit" value="Elimina Indirizzo">
                                     </form>
                                 </div>
@@ -35,10 +68,12 @@
                             </div>
                         </div>
                     </div>
-                {/foreach}
-                {else}
+                <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+                <?php } else { ?>
                 <div></div>
-                {/if}
+                <?php }?>
                 <br>
                 <p>Non hai un indirizzo?</p>
                 <button type="button" class="btn btn-link" data-toggle="modal" data-target="#address-add"
@@ -78,4 +113,6 @@
     </div>
 </div>
 
-{include file="footer.tpl"}
+<?php $_smarty_tpl->_subTemplateRender("file:footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+}
+}

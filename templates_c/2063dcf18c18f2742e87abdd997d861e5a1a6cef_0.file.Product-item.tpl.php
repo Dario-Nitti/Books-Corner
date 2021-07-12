@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-07-11 10:51:34
+/* Smarty version 3.1.39, created on 2021-07-11 16:40:09
   from 'C:\xampp\htdocs\Books-Corner\templates\Product-item.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_60eab1163bcaf9_23861784',
+  'unifunc' => 'content_60eb02c9a492c0_83739613',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2063dcf18c18f2742e87abdd997d861e5a1a6cef' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Books-Corner\\templates\\Product-item.tpl',
-      1 => 1625993491,
+      1 => 1626014405,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_60eab1163bcaf9_23861784 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60eb02c9a492c0_83739613 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('title'=>"Prodotto"), 0, false);
 ?>
 
@@ -68,8 +68,6 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
                             <br><br>
                             <form action="Add-Whislist.php" method="post">
                                 <input type="hidden" name="id_book" value=<?php echo $_smarty_tpl->tpl_vars['book']->value['id'];?>
->
-                                <input type="hidden" name="name" value=<?php echo $_smarty_tpl->tpl_vars['category']->value['name'];?>
 >
                                 <input class="btn btn-primary" type="submit" value="Metti nella lista dei desideri">
 

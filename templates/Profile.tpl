@@ -10,7 +10,7 @@
             <h2 class="w3-bar-item side">Menu</h2>
             <a href="#" id="datac" class="w3-bar-item w3-button active"><strong>I Miei Dati</strong></a><br>
             <a href="Order.php" id="orderac" class="w3-bar-item w3-button"><strong>I Miei Ordini</strong></a><br>
-            <a href="Address.tpl" id="addressc" class="w3-bar-item w3-button"><strong>In Tuoi
+            <a href="Address.php" id="addressc" class="w3-bar-item w3-button"><strong>In Tuoi
                     Indirizzi</strong></a><br>
             <a href="Cart.php" id="Logout" class="w3-bar-item w3-button"><strong>Carello</strong></a><br>
 
@@ -19,14 +19,12 @@
         <div class="col-8">
             <section>
                 <a id="data">
-                    <h2> Benvenuto {$user}</h2><br><br>
-                    <p><strong>ID</strong></p>
-                    <p><strong>Nome e Cognome</strong></p>
-                    <p><strong>Email</strong></p>
-                    <p><strong>Password</strong></p>
-                    <p><strong>Indirizzo</strong></p>
-                    <p><strong>Città</strong></p>
-                    <p><strong>Cap</strong></p>
+                    <h2> Benvenuto {$user.first_name}</h2><br><br>
+                    <p><strong>Nome e Cognome: {$user.first_name}  {$user.last_name}</strong></p>
+                    <p><strong>Email: {$user.email}</strong></p>
+                    <p><strong>Indirizzo: </strong></p>
+                    <p><strong>Città :</strong></p>
+                    <p><strong>Cap :</strong></p>
                 </a>
             </section>
         </div>

@@ -58,9 +58,9 @@
 <!--                                Categorie-->
 <!--                            </a>-->
 <!--                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">-->
-<!--                                <a class="dropdown-item" id="category" href="Products.html">Avventura</a>-->
-<!--                                <a class="dropdown-item" id="category" href="Products.html">Fantasy</a>-->
-<!--                                <a class="dropdown-item" id="category" href="Products.html">Romanzi</a>-->
+<!--                                <a class="dropdown-item" id="category" href="Products.tpl">Avventura</a>-->
+<!--                                <a class="dropdown-item" id="category" href="Products.tpl">Fantasy</a>-->
+<!--                                <a class="dropdown-item" id="category" href="Products.tpl">Romanzi</a>-->
 <!--                            </div>-->
 <!--                        </div>-->
 <!--                    </li>-->

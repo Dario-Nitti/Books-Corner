@@ -59,13 +59,14 @@
                                 Categorie
                             </a>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                <a class="dropdown-item" id="category" href="AllProducts.php">Avventura</a>
-                                <a class="dropdown-item" id="category" href="AllProducts.php">Fantasy</a>
-                                <a class="dropdown-item" id="category" href="AllProducts.php">Romanzi</a>
+                                <a class="dropdown-item" id="category" name="avventura" href="Products.php?id_category=1">Avventura</a>
+                                <a class="dropdown-item" id="category" name="fantasy" href="Products.php?id_category=2">Fantasy</a>
+                                <a class="dropdown-item" id="category" name="romanzi" href="Products.php?id_category=3">Romanzi</a>
+
                             </div>
                         </div>
                     </li>
-                    <li><a class="nav-link" href="Contact.tpl">Contatti</a></li>
+                    <li><a class="nav-link" href="Contact.php">Contatti</a></li>
                 </ul>
             </div>
         </div>

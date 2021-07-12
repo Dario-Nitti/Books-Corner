@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-06-09 10:41:32
+/* Smarty version 3.1.39, created on 2021-07-12 11:38:57
   from 'C:\xampp\htdocs\Books-Corner\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_60c07ebcbd8cb0_85428859',
+  'unifunc' => 'content_60ec0db10a5f23_34907979',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5bf20a3392c109b040a6d3af42add35a003b7018' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Books-Corner\\templates\\header.tpl',
-      1 => 1623227255,
+      1 => 1626082735,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_60c07ebcbd8cb0_85428859 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60ec0db10a5f23_34907979 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 
 <html lang="en">
@@ -95,13 +95,14 @@ function content_60c07ebcbd8cb0_85428859 (Smarty_Internal_Template $_smarty_tpl)
                                 Categorie
                             </a>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                <a class="dropdown-item" id="category" href="AllProducts.php">Avventura</a>
-                                <a class="dropdown-item" id="category" href="AllProducts.php">Fantasy</a>
-                                <a class="dropdown-item" id="category" href="AllProducts.php">Romanzi</a>
+                                <a class="dropdown-item" id="category" name="avventura" href="Products.php?id_category=1">Avventura</a>
+                                <a class="dropdown-item" id="category" name="fantasy" href="Products.php?id_category=2">Fantasy</a>
+                                <a class="dropdown-item" id="category" name="romanzi" href="Products.php?id_category=3">Romanzi</a>
+
                             </div>
                         </div>
                     </li>
-                    <li><a class="nav-link" href="Contact.tpl">Contatti</a></li>
+                    <li><a class="nav-link" href="Contact.php">Contatti</a></li>
                 </ul>
             </div>
         </div>

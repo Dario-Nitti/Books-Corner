@@ -2,15 +2,15 @@
 
 include "lib.inc.php";
 $smarty = includesmarty();
-
-if (!isset($_SESSION['user'])){
+$admin = "admin@web.it";
+if (!isset($_SESSION['user'])) {
     $smarty->display("Login.tpl");
     exit;
-}else{
+} elseif ($_SESSION['user'] == $admin){
+header("Location:Upload-product.php");
+} else {
     header("Location:profile.php");
 }
-
-
 
 
 

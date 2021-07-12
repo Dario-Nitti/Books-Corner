@@ -9,12 +9,8 @@ if (!isset($_SESSION['user'])) {
     //prendo l'id dell'utente
     $id_logged = $_SESSION["id"];
     $book_id = $_POST['id_book'];
-    $name = $_POST['name'];
-
-    $customer_wish="INSERT INTO customer_wishlist(name, customer_id) VALUES ('$name',$id_logged)";
+// inserisco l'id dell'utente loggato e l'id del libro
+    $customer_wish="INSERT INTO customer_wishlist(`customer_id`, `book_id`) VALUES ($id_logged,$book_id)";
     $con->query($customer_wish);
-    $id_wish= $con->insert_id;
-    $book_wish="INSERT INTO book_wishlist_ref(wishlist_id, book_id) VALUES ($id_wish,$book_id)";
-    $con->query($book_wish);
     header("Location:Product-item.php?id=".$book_id);
 }

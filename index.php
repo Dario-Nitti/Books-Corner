@@ -7,6 +7,8 @@ $book=array();
 while ($book = mysqli_fetch_array($result)) {
     $books[] = $book;
 }
+
+
 $smarty->assign("books", $books);
 $smarty->display("Home.tpl");
 $smarty->display("index.tpl.html");

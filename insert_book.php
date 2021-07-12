@@ -11,7 +11,7 @@ $cat = $_POST['categoria'];
 $author = $_POST['autore'];
 //divido il nome e il cognome dell'autore
 list($name, $surname) = (explode(" ", $author));
-
+$title=mysqli_real_escape_string($con,$title);
 // prendo i valori di input e li metto in variabili
 
 $img_name = $_FILES['image']['name'];
