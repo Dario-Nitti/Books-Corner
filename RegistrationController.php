@@ -16,7 +16,13 @@ if ($num == 1) {
 } else {
     $reg = "INSERT INTO customer (email,hashed_pwd,first_name,last_name) VALUES ('$email', '$hashed_pwd','$nome','$cognome')";
     mysqli_query($con, $reg);
+    $id_utente = $con->insert_id;
+    $cart_user = "INSERT INTO shopping_cart(customer_id) VALUES ($id_utente)";
+    $con->query($cart_user);
     header('location:Login.php');
+
+
 }
+
 
 

@@ -8,7 +8,7 @@
     <div class="row">
         <div class="col-4">
             <h2 class="w3-bar-item side">Menu</h2>
-            <a href="#" id="datac" class="w3-bar-item w3-button active"><strong>I Miei Dati</strong></a><br>
+            <a href="#" id="datac" class="w3-bar-item w3-button active"><strong>Lista desideri</strong></a><br>
             <a href="Order.php" id="orderac" class="w3-bar-item w3-button"><strong>I Miei Ordini</strong></a><br>
             <a href="Address.php" id="addressc" class="w3-bar-item w3-button"><strong>In Tuoi
                     Indirizzi</strong></a><br>
@@ -18,14 +18,19 @@
         </div>
         <div class="col-8">
             <section>
-                <a id="data">
-                    <h2> Benvenuto {$user.first_name}</h2><br><br>
-                    <p><strong>Nome e Cognome: {$user.first_name}  {$user.last_name}</strong></p>
-                    <p><strong>Email: {$user.email}</strong></p>
-                    <p><strong>Indirizzo: </strong></p>
-                    <p><strong>Città :</strong></p>
-                    <p><strong>Cap :</strong></p>
-                </a>
+                <h2> Benvenuto {$user.first_name}</h2><br><br>
+                <div class="grid-container">
+                    {if !empty($books)}
+                        <div class="grid-item">
+                            {foreach from=$books item="book"}
+                            <a href="Product-item.php?id={$book.id}"><img src="{$book.pic}" style="width:20%">
+                                <p><strong>{$book.title}</strong></p></a>
+                            {/foreach}
+                        </div>
+                        {else}
+                    <div></div>
+                    {/if}
+                </div>
             </section>
         </div>
     </div>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-06-09 11:46:10
+/* Smarty version 3.1.39, created on 2021-07-14 12:35:14
   from 'C:\xampp\htdocs\Books-Corner\templates\Cart.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_60c08de2202af4_07897477',
+  'unifunc' => 'content_60eebde29340f7_16953345',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2e4482fd3e9d8a0e057b3905093f2dac8ace449f' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Books-Corner\\templates\\Cart.tpl',
-      1 => 1623231703,
+      1 => 1626258913,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_60c08de2202af4_07897477 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60eebde29340f7_16953345 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('title'=>"Carrello"), 0, false);
 ?>
 
@@ -36,6 +36,7 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
                     <div class="cart-page">
                         <h1> Carrello</h1>
                         <div class="container">
+
                             <table id="cart" class="table table-hover table-condensed">
                                 <thead>
                                 <tr>
@@ -46,34 +47,63 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
                                     <th style="width:10%"></th>
                                 </tr>
                                 </thead>
-                                <tbody>
+                                <?php if ($_smarty_tpl->tpl_vars['carts']->value) {?>
+                                    <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['carts']->value, 'cart');
+$_smarty_tpl->tpl_vars['cart']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['cart']->value) {
+$_smarty_tpl->tpl_vars['cart']->do_else = false;
+?>
+                                    <tbody>
                                 <tr>
                                     <td data-th="Product">
-                                        <div class="row">
-                                            <div class="col-sm-2 hidden-xs"><img src="img/1.jpg" alt="..."
-                                                                                 class="img-responsive"/></div>
-                                            <div class="col-sm-10">
-                                                <h4 class="nomargin"></h4>
-                                                <p></p>
-                                            </div>
+                                    <div class="row">
+                                        <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['books']->value, 'book');
+$_smarty_tpl->tpl_vars['book']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['book']->value) {
+$_smarty_tpl->tpl_vars['book']->do_else = false;
+?>
+                                        <div class="col-sm-2 hidden-xs">
+                                            <img src="<?php echo $_smarty_tpl->tpl_vars['books']->value['pic'];?>
+" alt="..."
+                                                 class="img-responsive"/>
                                         </div>
-                                    </td>
-                                    <!--- prezzo--->
-                                    <td data-th="Price">$Price</td>
-                                    <td data-th="Quantity">
-                                        <input type="number" class="form-control text-center" value="1">
-                                    </td>
-                                    <!---subtotale-->
-                                    <td data-th="Subtotal" class="text-center"></td>
-                                </tr>
-                                </tbody>
+                                        <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+
+                                        <div class="col-sm-10">
+                                            <h4 class="nomargin"></h4>
+                                            <p></p>
+                                        </div>
+                                        </div>
+                                        </td>
+                                        <!--- prezzo--->
+                                        <td data-th="Price"><?php echo $_smarty_tpl->tpl_vars['cart']->value['subtotal'];?>
+</td>
+                                        <td data-th="Quantity">
+                                            <input type="number" class="form-control text-center"
+                                                   value="<?php echo $_smarty_tpl->tpl_vars['cart']->value['quantity'];?>
+">
+                                        </td>
+                                        <!---subtotale-->
+                                        <td data-th="Subtotal" class="text-center"></td>
+                                        </tr>
+
+
+                                        </tbody>
+                                    <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+                                <?php }?>
                                 <tfoot>
                                 <tr class="visible-xs">
                                     <td class="text-center"><strong></strong></td>
                                     <!--totale-->
                                 </tr>
                                 <tr>
-                                    <td><a href="Home.php" class="btn btn-warning">Continua
+                                    <td><a href="index.php" class="btn btn-warning">Continua
                                             lo shopping</a></td>
                                     <td colspan="2" class="hidden-xs"></td>
                                     <td class="hidden-xs text-center"><strong></strong></td>
@@ -92,8 +122,12 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
         <div class="container card" style=" width: 18rem;">
             <h4 class="total">Totale</h4>
             <hr>
-            <td data-th="totale"><strong>$Prezzo totale</strong></td>
-            <td><a href="Checkout.tpl" class="btn btn-primary second-btn">Vai alla cassa</a></td><br>
+            <td data-th="totale"><p>total</p></td>
+            <br>
+            <td data-th="totale"><strong>total</strong></td>
+
+            <td><a href="Checkout.php" class="btn btn-primary second-btn">Vai alla cassa</a></td>
+            <br>
         </div>
     </div>
 </div>

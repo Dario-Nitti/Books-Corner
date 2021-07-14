@@ -7,11 +7,12 @@ if (!isset($_SESSION['user'])) {
 } else {
     //prendo l'id dell'utente
     $id_logged = $_SESSION["id"];
-//lo inserisco nella tabella shopping_cart
-    $cart_user = "INSERT INTO shopping_cart(customer_id) VALUES ($id_logged)";
-    $con->query($cart_user);
-    $id_cart = $con->insert_id;
-    //prendo l'ultimo id inserito(quello sullo shopping cart)
+    $sql = "SELECT * FROM shopping_cart WHERE customer_id=".$id_logged;
+    $result = mysqli_query($con,$sql);
+    $resrow = mysqli_fetch_object($result);
+    $id_cart = $resrow->id;
+//prendo l'id dello shopping cart dell'utente nella tabella shopping_cart
+
     $quant = $_POST['quantita'];
     $price = $_POST['price'];
     $book_id = $_POST['id_book'];

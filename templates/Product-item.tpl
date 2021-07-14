@@ -24,7 +24,7 @@
                             <br>
                             <form action="Add-Cart.php" method="post">
                                 <label for="quantity">Disponibilità: {$book.quantity}</label>
-                                <input class="input" type="number" id="quantita" name="quantita" min="0"
+                                <input class="input" type="number" id="quantita" name="quantita" value="1" min="1"
                                        max="{$book.quantity}"><br><br>
                                 <input type="hidden" name="price" value={$book.price}>
                                 <input type="hidden" name="id_book" value={$book.id}>

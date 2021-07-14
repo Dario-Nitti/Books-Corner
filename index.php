@@ -6,10 +6,9 @@ $result = mysqli_query($con,$book_list);
 $book=array();
 while ($book = mysqli_fetch_array($result)) {
     $books[] = $book;
+    $smarty->assign("books", $books);
 }
 
 
-$smarty->assign("books", $books);
 $smarty->display("Home.tpl");
-$smarty->display("index.tpl.html");
-?>
+
