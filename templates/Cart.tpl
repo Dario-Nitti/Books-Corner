@@ -27,18 +27,21 @@
                                 <tr>
                                     <td data-th="Product">
                                     <div class="row">
-                                        {foreach from=$books item=book}
-                                        <div class="col-sm-2 hidden-xs">
-                                            <img src="{$book.pic}" alt="..."
-                                                 class="img-responsive"/>
+                                    {foreach from=$books item=book}
+                                    <div class="col-sm-2 hidden-xs">
+
+                                        <img src="{$book.pic}" alt="..."
+                                             class="img-responsive"/>
                                         </div>
                                         {/foreach}
-
                                         <div class="col-sm-10">
                                             <h4 class="nomargin"></h4>
                                             <p></p>
                                         </div>
                                         </div>
+
+
+
                                         </td>
                                         <!--- prezzo--->
                                         <td data-th="Price">{$cart.subtotal}</td>
@@ -65,7 +68,7 @@
                                     <td colspan="2" class="hidden-xs"></td>
                                     <td class="hidden-xs text-center"><strong></strong></td>
                                     <!---totale-->
-                                    <td><a href="Checkout.tpl" class="btn btn-primary">Vai alla cassa</a></td>
+                                    <td><a href="checkout.php" class="btn btn-primary">Vai alla cassa</a></td>
                                 </tr>
                                 </tfoot>
                             </table>
@@ -79,11 +82,15 @@
         <div class="container card" style=" width: 18rem;">
             <h4 class="total">Totale</h4>
             <hr>
-            <td data-th="totale"><p>total</p></td>
-            <br>
-            <td data-th="totale"><strong>total</strong></td>
+            {foreach from=$carts item=cart name=foo}
+                <td data-th="totale"><p>- {$cart.subtotal}</p></td>
+                <br>
+            {/foreach}
 
-            <td><a href="Checkout.php" class="btn btn-primary second-btn">Vai alla cassa</a></td>
+            <br>
+            <td data-th="totale"><strong>{$total}</strong></td>
+
+            <td><a href="checkout.php" class="btn btn-primary second-btn">Vai alla cassa</a></td>
             <br>
         </div>
     </div>
