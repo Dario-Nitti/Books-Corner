@@ -29,7 +29,7 @@
                                     <div class="row">
                                         {foreach from=$books item=book}
                                         <div class="col-sm-2 hidden-xs">
-                                            <img src="{$books.pic}" alt="..."
+                                            <img src="{$book.pic}" alt="..."
                                                  class="img-responsive"/>
                                         </div>
                                         {/foreach}
