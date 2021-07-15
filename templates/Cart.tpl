@@ -21,33 +21,32 @@
                                     <th style="width:10%"></th>
                                 </tr>
                                 </thead>
-                                {if $carts}
+                                {if !empty($carts)}
                                     {foreach from=$carts item=cart }
-                                    <tbody>
-                                <tr>
-                                    <td data-th="Product">
-                                    <div class="row">
-                                    {foreach from=$books item=book}
-                                    <div class="col-sm-2 hidden-xs">
+                                        <tbody>
+                                        <strong>
+                                            <td data-th="Product">
+                                                <div class="row">
+                                                    <div class="col-sm-2 hidden-xs">
 
-                                        <img src="{$book.pic}" alt="..."
-                                             class="img-responsive"/>
-                                        </div>
-                                        {/foreach}
-                                        <div class="col-sm-10">
-                                            <h4 class="nomargin"></h4>
-                                            <p></p>
-                                        </div>
-                                        </div>
+                                                        <img src="{$cart.pic}" alt="..."
+                                                             class="img-responsive"/>
+                                                    </div>
+                                                    <div class="col-sm-10">
+                                                        <h4 class="nomargin"></h4>
+                                                        <p></p>
+                                                    </div>
+                                                </div>
 
 
-
-                                        </td>
-                                        <!--- prezzo--->
-                                        <td data-th="Price">{$cart.subtotal}</td>
+                                            </td>
+                                            <!--- prezzo--->
+                                            <td data-th="Price">
+                                                <strong>{math equation="x * y" x=$cart.subtotal y=$cart.item_quantity}
+                                            </td>
+                                        </strong>
                                         <td data-th="Quantity">
-                                            <input type="number" class="form-control text-center"
-                                                   value="{$cart.quantity}">
+                                            <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$cart.item_quantity}</p>
                                         </td>
                                         <!---subtotale-->
                                         <td data-th="Subtotal" class="text-center"></td>
@@ -56,6 +55,8 @@
 
                                         </tbody>
                                     {/foreach}
+                                {else}
+                                    <div></div>
                                 {/if}
                                 <tfoot>
                                 <tr class="visible-xs">
@@ -82,11 +83,14 @@
         <div class="container card" style=" width: 18rem;">
             <h4 class="total">Totale</h4>
             <hr>
-            {foreach from=$carts item=cart name=foo}
-                <td data-th="totale"><p>- {$cart.subtotal}</p></td>
-                <br>
-            {/foreach}
-
+            {if !empty($carts)}
+                {foreach from=$carts item=cart name=foo}
+                    <td data-th="totale"><p>- {math equation="x * y" x=$cart.subtotal y=$cart.item_quantity}</p></td>
+                    <br>
+                {/foreach}
+            {else}
+                <div></div>
+            {/if}
             <br>
             <td data-th="totale"><strong>{$total}</strong></td>
 

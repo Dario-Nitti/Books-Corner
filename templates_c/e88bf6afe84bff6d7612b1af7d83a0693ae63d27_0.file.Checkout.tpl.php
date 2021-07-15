@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-07-14 19:34:58
+/* Smarty version 3.1.39, created on 2021-07-15 17:01:02
   from 'C:\xampp\htdocs\Books-Corner\templates\Checkout.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_60ef2042c37dd2_92413395',
+  'unifunc' => 'content_60f04daec333e6_82910604',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e88bf6afe84bff6d7612b1af7d83a0693ae63d27' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Books-Corner\\templates\\Checkout.tpl',
-      1 => 1626284097,
+      1 => 1626361261,
       2 => 'file',
     ),
   ),
@@ -22,13 +22,14 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_60ef2042c37dd2_92413395 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60f04daec333e6_82910604 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp\\htdocs\\Books-Corner\\libs\\plugins\\function.math.php','function'=>'smarty_function_math',),));
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('title'=>''), 0, false);
 ?>
 
 <br>
 <!-- BODY CHECKOUT-->
-<form action="/action_page.php">
+<form action="add_orders.php" method="post">
     <div class="container">
         <!--card products  details-->
         <div class="title-card ">
@@ -44,14 +45,20 @@ $_smarty_tpl->tpl_vars['book']->do_else = false;
                     <div class="row">
                         <div class=" col-sm-2">
                             <img class="card-img" src="<?php echo $_smarty_tpl->tpl_vars['book']->value['pic'];?>
-"
-                                 alt="Card image"/>
+" width="20px"
+                                 alt="Card image"/ >
                         </div>
                         <div class=" col-sm-8">
-                            <h3 class="card-text"><?php echo $_smarty_tpl->tpl_vars['book']->value['titolo'];?>
+                            <h3 class="card-text"><?php echo $_smarty_tpl->tpl_vars['book']->value['title'];?>
 </h3>
-
-
+                            <input type="hidden" name="id_book" value=<?php echo $_smarty_tpl->tpl_vars['book']->value['id'];?>
+>
+                            <br>
+                            <p>Quantità: <?php echo $_smarty_tpl->tpl_vars['book']->value['item_quantity'];?>
+</p>
+                            <br>
+                            <h4><strong>&nbsp;&nbsp;<?php echo smarty_function_math(array('equation'=>"x * y",'x'=>$_smarty_tpl->tpl_vars['book']->value['subtotal'],'y'=>$_smarty_tpl->tpl_vars['book']->value['item_quantity']),$_smarty_tpl);?>
+ €</strong></h4>
                         </div>
                     </div>
                 </div>
@@ -89,7 +96,6 @@ $_smarty_tpl->tpl_vars['addr']->do_else = false;
 </p>
 
 
-
                             </div>
                         <?php
 }
@@ -103,8 +109,9 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                 <h4 class="total">Totale</h4>
                 <hr>
                 <td data-th="totale"><strong><?php echo $_smarty_tpl->tpl_vars['total']->value;?>
-</strong></td>
-                <td><a href="Checkout.tpl" class="btn btn-primary second-btn">Acquista</a></td>
+ €</strong></td>
+                <input type="hidden" value="<?php echo $_smarty_tpl->tpl_vars['total']->value;?>
+ " name="totale">
                 <br>
             </div>
         </div>
@@ -122,22 +129,18 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                 <div class="card check">
                     <div class="row">
                         <div class=" col">
-                            <input type="radio" id="pay" name="pay" value="pay">
-                            <label for="pay">Contrassegno</label><br>
+                            <input type="radio" id="pay" name="pay" value="pay" checked>
+                            <label for="pay">Contrassegno ( +8 €)</label><br>
                         </div>
                         <div class="col">
 
                         </div>
                     </div>
                 </div>
-                <br><input class="check btn btn-primary" type="submit" value="Acquista"><br><br>
-                <div style="text-align: center;">
-                    <div id="paypal-button-container"></div>
-                </div>
             </div>
         </div>
     </div>
-
+    <br><input class="check btn btn-primary" type="submit" value="Acquista" style="margin-left: 400px"><br><br>
 </form>
 
 <?php $_smarty_tpl->_subTemplateRender("file:footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);

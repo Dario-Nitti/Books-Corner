@@ -1,0 +1,27 @@
+<?php
+include "lib.inc.php";
+checkSessione();
+$id_logged = $_SESSION["id"];
+
+$sql_order="INSERT INTO `order`(status, customer_id) VALUES ('shipped',$id_logged)";
+$con->query($sql_order);
+
+
+$sql_item="INSERT INTO order_item(quantity, subtotal, order_id, book_id)
+SELECT shopping_cart_item.item_quantity,shopping_cart_item.subtotal,`order`.`id`,shopping_cart_item.book_id
+FROM shopping_cart_item INNER JOIN `order` ON `order`.`customer_id`=".$id_logged;
+$con->query($sql_item);
+
+
+$sql_shopping_cart_id="SELECT id FROM shopping_cart WHERE customer_id=".$id_logged;
+$res=mysqli_query($con, $sql_shopping_cart_id);
+$row=mysqli_fetch_object($res);
+$id_cart=intval($row->id);
+
+
+
+
+$del_cart="DELETE FROM shopping_cart_item WHERE shopping_cart_id=".$id_cart;
+$con->query($del_cart);
+
+header("Location:Success.php");

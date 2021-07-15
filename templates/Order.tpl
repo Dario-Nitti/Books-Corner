@@ -18,20 +18,27 @@
         </div>
         <div class="col-8">
             <section>
-                <h3 class="card-title">$NomeOrdine</h3>
-                <div class="order card">
+                <br>
+                {if !empty($orders)}
+                    {foreach from=$orders item="order"}
+                    <div class="order card">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-6 col-md-4">
-                                <img src="./img/doni.jpg" alt="Order" width="150" height="170" style="float: left;">
+                                <img src="{$order.pic}" alt="Order" width="150" height="170" style="float: left;">
                             </div>
                             <div class="col-12 col-md-8 option">
-                                <h3 class="card-text" id="price">0.00€</h3>
-                                <a href="#"  id="delete" class="btn btn-primary">Elimina Ordine</a>
+                                <h3 class="card-title" style="margin-bottom: -10px">{$order.title}</h3>
+                                <h3 class="card-text" id="price">{$order.subtotal}€</h3>
+
                             </div>
                         </div>
                     </div>
                 </div>
+                    {/foreach}
+                {else}
+                    <div></div>
+                {/if}
             </section>
         </div>
     </div>

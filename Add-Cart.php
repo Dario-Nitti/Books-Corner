@@ -18,7 +18,7 @@ if (!isset($_SESSION['user'])) {
     $book_id = $_POST['id_book'];
     //prendo i valori nascosti per riempiere il carrello dell'utente
 
-    $cart_item_user = "INSERT INTO shopping_cart_item(quantity, subtotal, shopping_cart_id, book_id) VALUES
+    $cart_item_user = "INSERT INTO shopping_cart_item(item_quantity, subtotal, shopping_cart_id, book_id) VALUES
                     ($quant,$price,$id_cart,$book_id)";
     $con->query($cart_item_user);
     $update_quant="UPDATE book SET quantity=quantity - $quant WHERE id=$book_id";

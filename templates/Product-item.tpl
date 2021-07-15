@@ -28,7 +28,7 @@
                                        max="{$book.quantity}"><br><br>
                                 <input type="hidden" name="price" value={$book.price}>
                                 <input type="hidden" name="id_book" value={$book.id}>
-                                <input class="btn btn-primary" type="submit" value="Acquista">
+                                <input class="btn btn-primary" type="submit" value="Aggiungi al carrello">
                             </form>
                             <br>
                             <h3>{$book.price} €</h3>

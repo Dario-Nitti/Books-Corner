@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-07-13 15:23:15
+/* Smarty version 3.1.39, created on 2021-07-15 10:35:38
   from 'C:\xampp\htdocs\Books-Corner\templates\Product-item.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_60ed93c30227d4_02919880',
+  'unifunc' => 'content_60eff35a517334_55602638',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2063dcf18c18f2742e87abdd997d861e5a1a6cef' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Books-Corner\\templates\\Product-item.tpl',
-      1 => 1626182593,
+      1 => 1626338133,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_60ed93c30227d4_02919880 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60eff35a517334_55602638 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('title'=>"Prodotto"), 0, false);
 ?>
 
@@ -51,16 +51,16 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
 </h1>
                             <br>
                             <form action="Add-Cart.php" method="post">
-                                <label for="quantity">Disponibilità: <?php echo $_smarty_tpl->tpl_vars['book']->value['quantity'];?>
+                                <label for="quantity">Disponibilità: <?php echo $_smarty_tpl->tpl_vars['book']->value['book_quantity'];?>
 </label>
                                 <input class="input" type="number" id="quantita" name="quantita" value="1" min="1"
-                                       max="<?php echo $_smarty_tpl->tpl_vars['book']->value['quantity'];?>
+                                       max="<?php echo $_smarty_tpl->tpl_vars['book']->value['book_quantity'];?>
 "><br><br>
                                 <input type="hidden" name="price" value=<?php echo $_smarty_tpl->tpl_vars['book']->value['price'];?>
 >
                                 <input type="hidden" name="id_book" value=<?php echo $_smarty_tpl->tpl_vars['book']->value['id'];?>
 >
-                                <input class="btn btn-primary" type="submit" value="Acquista">
+                                <input class="btn btn-primary" type="submit" value="Aggiungi al carrello">
                             </form>
                             <br>
                             <h3><?php echo $_smarty_tpl->tpl_vars['book']->value['price'];?>

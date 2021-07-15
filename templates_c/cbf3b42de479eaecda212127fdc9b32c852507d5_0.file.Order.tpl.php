@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-06-09 11:57:19
+/* Smarty version 3.1.39, created on 2021-07-15 17:22:22
   from 'C:\xampp\htdocs\Books-Corner\templates\Order.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_60c0907f61a639_79370028',
+  'unifunc' => 'content_60f052ae528119_81688483',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cbf3b42de479eaecda212127fdc9b32c852507d5' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Books-Corner\\templates\\Order.tpl',
-      1 => 1623232623,
+      1 => 1626362540,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_60c0907f61a639_79370028 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60f052ae528119_81688483 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('title'=>"ordini"), 0, false);
 ?>
 
@@ -44,20 +44,37 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
         </div>
         <div class="col-8">
             <section>
-                <h3 class="card-title">$NomeOrdine</h3>
-                <div class="order card">
+                <br>
+                <?php if (!empty($_smarty_tpl->tpl_vars['orders']->value)) {?>
+                    <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['orders']->value, 'order');
+$_smarty_tpl->tpl_vars['order']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['order']->value) {
+$_smarty_tpl->tpl_vars['order']->do_else = false;
+?>
+                    <div class="order card">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-6 col-md-4">
-                                <img src="./img/doni.jpg" alt="Order" width="150" height="170" style="float: left;">
+                                <img src="<?php echo $_smarty_tpl->tpl_vars['order']->value['pic'];?>
+" alt="Order" width="150" height="170" style="float: left;">
                             </div>
                             <div class="col-12 col-md-8 option">
-                                <h3 class="card-text" id="price">0.00€</h3>
-                                <a href="#"  id="delete" class="btn btn-primary">Elimina Ordine</a>
+                                <h3 class="card-title" style="margin-bottom: -10px"><?php echo $_smarty_tpl->tpl_vars['order']->value['title'];?>
+</h3>
+                                <h3 class="card-text" id="price"><?php echo $_smarty_tpl->tpl_vars['order']->value['subtotal'];?>
+€</h3>
+
                             </div>
                         </div>
                     </div>
                 </div>
+                    <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+                <?php } else { ?>
+                    <div></div>
+                <?php }?>
             </section>
         </div>
     </div>
