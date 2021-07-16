@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 11, 2021 at 04:13 PM
--- Server version: 10.4.17-MariaDB
--- PHP Version: 8.0.2
+-- Creato il: Lug 16, 2021 alle 19:01
+-- Versione del server: 10.4.19-MariaDB
+-- Versione PHP: 7.3.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `admin`
+-- Struttura della tabella `admin`
 --
 
 CREATE TABLE `admin` (
@@ -36,7 +36,7 @@ CREATE TABLE `admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `admin`
+-- Dump dei dati per la tabella `admin`
 --
 
 INSERT INTO `admin` (`id`, `email`, `hashed_pwd`, `first_name`, `last_name`) VALUES
@@ -46,7 +46,7 @@ INSERT INTO `admin` (`id`, `email`, `hashed_pwd`, `first_name`, `last_name`) VAL
 -- --------------------------------------------------------
 
 --
--- Table structure for table `author`
+-- Struttura della tabella `author`
 --
 
 CREATE TABLE `author` (
@@ -56,16 +56,20 @@ CREATE TABLE `author` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `author`
+-- Dump dei dati per la tabella `author`
 --
 
 INSERT INTO `author` (`id`, `first_name`, `last_name`) VALUES
-(1, 'Isaac', 'Asimov');
+(1, 'Isaac', 'Asimov'),
+(2, 'JRR', 'Tolkien'),
+(3, 'George', 'Orwell'),
+(4, 'Robert', 'Swindells'),
+(5, 'Jack', 'London');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `book`
+-- Struttura della tabella `book`
 --
 
 CREATE TABLE `book` (
@@ -81,16 +85,18 @@ CREATE TABLE `book` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `book`
+-- Dump dei dati per la tabella `book`
 --
 
 INSERT INTO `book` (`id`, `isbn`, `title`, `edition`, `pub_date`, `quantity`, `price`, `publisher_id`, `pic`) VALUES
-(1, '8804735112', 'Io, Robot', '4', '2021-05-25', 8, 12.82, 1, './templates/img/IMG-60e8250ab2f0c6.45533109.jpg');
+(2, '0007611625', 'Lo Hobbit', '3', '2006-08-07', 2, 19.7, 2, 'templates/img/IMG-60f18a40baa0e7.50433131.jpg'),
+(4, '8804604530', 'La stanza 13', '6', '2011-03-01', 4, 9.1, 4, 'templates/img/IMG-60f18c6394f132.01758450.jpg'),
+(5, '8809781694', 'Zanna Bianca', '8', '2009-04-09', 6, 8.07, 5, 'templates/img/IMG-60f1b13b974277.77869223.jpg');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `book_author`
+-- Struttura della tabella `book_author`
 --
 
 CREATE TABLE `book_author` (
@@ -100,16 +106,18 @@ CREATE TABLE `book_author` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `book_author`
+-- Dump dei dati per la tabella `book_author`
 --
 
 INSERT INTO `book_author` (`id`, `author_id`, `book_id`) VALUES
-(1, 1, 1);
+(2, 2, 2),
+(4, 4, 4),
+(5, 5, 5);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `book_category`
+-- Struttura della tabella `book_category`
 --
 
 CREATE TABLE `book_category` (
@@ -119,23 +127,25 @@ CREATE TABLE `book_category` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `book_category`
+-- Dump dei dati per la tabella `book_category`
 --
 
 INSERT INTO `book_category` (`id`, `category_id`, `book_id`) VALUES
-(1, 2, 1);
+(2, 2, 2),
+(4, 3, 4),
+(5, 1, 5);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `book_review`
+-- Struttura della tabella `book_review`
 --
 
 CREATE TABLE `book_review` (
   `id` int(10) UNSIGNED NOT NULL,
   `title` text NOT NULL,
   `body` text NOT NULL,
-  `rating` float NOT NULL,
+  `rating` int(11) NOT NULL,
   `submission_date` datetime DEFAULT current_timestamp(),
   `customer_id` int(10) UNSIGNED NOT NULL,
   `book_id` int(10) UNSIGNED NOT NULL
@@ -144,7 +154,7 @@ CREATE TABLE `book_review` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `category`
+-- Struttura della tabella `category`
 --
 
 CREATE TABLE `category` (
@@ -153,7 +163,7 @@ CREATE TABLE `category` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `category`
+-- Dump dei dati per la tabella `category`
 --
 
 INSERT INTO `category` (`id`, `name`) VALUES
@@ -164,7 +174,7 @@ INSERT INTO `category` (`id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `customer`
+-- Struttura della tabella `customer`
 --
 
 CREATE TABLE `customer` (
@@ -176,16 +186,16 @@ CREATE TABLE `customer` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `customer`
+-- Dump dei dati per la tabella `customer`
 --
 
 INSERT INTO `customer` (`id`, `email`, `hashed_pwd`, `first_name`, `last_name`) VALUES
-(1, 'dario@dario.it', '2dbe33913ae5d6b16a801119f5fa1c419620c26d1a456e01490d697eb9b12589', 'DARIO', 'NITTI');
+(3, 'dario.nitti@outlook.it', '3bd61c2d73cf3b9727181781647969b5100d87abf2973fe8bcb344d34eb7f686', 'Dario', 'Nitti');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `customer_address`
+-- Struttura della tabella `customer_address`
 --
 
 CREATE TABLE `customer_address` (
@@ -204,7 +214,7 @@ CREATE TABLE `customer_address` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `customer_wishlist`
+-- Struttura della tabella `customer_wishlist`
 --
 
 CREATE TABLE `customer_wishlist` (
@@ -212,17 +222,10 @@ CREATE TABLE `customer_wishlist` (
   `book_id` int(10) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Dumping data for table `customer_wishlist`
---
-
-INSERT INTO `customer_wishlist` (`customer_id`, `book_id`) VALUES
-(1, 1);
-
 -- --------------------------------------------------------
 
 --
--- Table structure for table `order`
+-- Struttura della tabella `order`
 --
 
 CREATE TABLE `order` (
@@ -235,7 +238,7 @@ CREATE TABLE `order` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `order_item`
+-- Struttura della tabella `order_item`
 --
 
 CREATE TABLE `order_item` (
@@ -249,7 +252,7 @@ CREATE TABLE `order_item` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `publisher`
+-- Struttura della tabella `publisher`
 --
 
 CREATE TABLE `publisher` (
@@ -258,16 +261,20 @@ CREATE TABLE `publisher` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `publisher`
+-- Dump dei dati per la tabella `publisher`
 --
 
 INSERT INTO `publisher` (`id`, `name`) VALUES
-(1, 'Mondadori');
+(1, 'Mondadori'),
+(2, 'HarperCollins'),
+(3, 'Mondadori'),
+(4, 'Mondadori'),
+(5, 'Giunti');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `shopping_cart`
+-- Struttura della tabella `shopping_cart`
 --
 
 CREATE TABLE `shopping_cart` (
@@ -276,58 +283,51 @@ CREATE TABLE `shopping_cart` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `shopping_cart`
+-- Dump dei dati per la tabella `shopping_cart`
 --
 
 INSERT INTO `shopping_cart` (`id`, `customer_id`) VALUES
-(1, 1);
+(3, 3);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `shopping_cart_item`
+-- Struttura della tabella `shopping_cart_item`
 --
 
 CREATE TABLE `shopping_cart_item` (
   `id` int(10) UNSIGNED NOT NULL,
-  `quantity` int(10) UNSIGNED NOT NULL,
+  `item_quantity` int(10) UNSIGNED NOT NULL,
   `subtotal` float NOT NULL,
   `shopping_cart_id` int(10) UNSIGNED NOT NULL,
   `book_id` int(10) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `shopping_cart_item`
---
-
-INSERT INTO `shopping_cart_item` (`id`, `quantity`, `subtotal`, `shopping_cart_id`, `book_id`) VALUES
-(1, 2, 12.82, 1, 1);
-
---
--- Indexes for dumped tables
+-- Indici per le tabelle scaricate
 --
 
 --
--- Indexes for table `admin`
+-- Indici per le tabelle `admin`
 --
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `author`
+-- Indici per le tabelle `author`
 --
 ALTER TABLE `author`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `book`
+-- Indici per le tabelle `book`
 --
 ALTER TABLE `book`
   ADD PRIMARY KEY (`id`),
   ADD KEY `publisher_id` (`publisher_id`);
 
 --
--- Indexes for table `book_author`
+-- Indici per le tabelle `book_author`
 --
 ALTER TABLE `book_author`
   ADD PRIMARY KEY (`id`),
@@ -335,7 +335,7 @@ ALTER TABLE `book_author`
   ADD KEY `book_id` (`book_id`);
 
 --
--- Indexes for table `book_category`
+-- Indici per le tabelle `book_category`
 --
 ALTER TABLE `book_category`
   ADD PRIMARY KEY (`id`),
@@ -343,7 +343,7 @@ ALTER TABLE `book_category`
   ADD KEY `book_id` (`book_id`);
 
 --
--- Indexes for table `book_review`
+-- Indici per le tabelle `book_review`
 --
 ALTER TABLE `book_review`
   ADD PRIMARY KEY (`id`),
@@ -351,26 +351,26 @@ ALTER TABLE `book_review`
   ADD KEY `book_id` (`book_id`);
 
 --
--- Indexes for table `category`
+-- Indici per le tabelle `category`
 --
 ALTER TABLE `category`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `customer`
+-- Indici per le tabelle `customer`
 --
 ALTER TABLE `customer`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `customer_address`
+-- Indici per le tabelle `customer_address`
 --
 ALTER TABLE `customer_address`
   ADD PRIMARY KEY (`id`),
   ADD KEY `customer_id` (`customer_id`);
 
 --
--- Indexes for table `customer_wishlist`
+-- Indici per le tabelle `customer_wishlist`
 --
 ALTER TABLE `customer_wishlist`
   ADD PRIMARY KEY (`customer_id`,`book_id`),
@@ -378,14 +378,14 @@ ALTER TABLE `customer_wishlist`
   ADD KEY `book_id` (`book_id`);
 
 --
--- Indexes for table `order`
+-- Indici per le tabelle `order`
 --
 ALTER TABLE `order`
   ADD PRIMARY KEY (`id`),
   ADD KEY `customer_id` (`customer_id`);
 
 --
--- Indexes for table `order_item`
+-- Indici per le tabelle `order_item`
 --
 ALTER TABLE `order_item`
   ADD PRIMARY KEY (`id`),
@@ -393,20 +393,20 @@ ALTER TABLE `order_item`
   ADD KEY `book_id` (`book_id`);
 
 --
--- Indexes for table `publisher`
+-- Indici per le tabelle `publisher`
 --
 ALTER TABLE `publisher`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `shopping_cart`
+-- Indici per le tabelle `shopping_cart`
 --
 ALTER TABLE `shopping_cart`
   ADD PRIMARY KEY (`id`),
   ADD KEY `customer_id` (`customer_id`);
 
 --
--- Indexes for table `shopping_cart_item`
+-- Indici per le tabelle `shopping_cart_item`
 --
 ALTER TABLE `shopping_cart_item`
   ADD PRIMARY KEY (`id`),
@@ -414,156 +414,162 @@ ALTER TABLE `shopping_cart_item`
   ADD KEY `book_id` (`book_id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT per le tabelle scaricate
 --
 
 --
--- AUTO_INCREMENT for table `admin`
+-- AUTO_INCREMENT per la tabella `admin`
 --
 ALTER TABLE `admin`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `author`
+-- AUTO_INCREMENT per la tabella `author`
 --
 ALTER TABLE `author`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `book`
+-- AUTO_INCREMENT per la tabella `book`
 --
 ALTER TABLE `book`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `book_author`
+-- AUTO_INCREMENT per la tabella `book_author`
 --
 ALTER TABLE `book_author`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `book_category`
+-- AUTO_INCREMENT per la tabella `book_category`
 --
 ALTER TABLE `book_category`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `book_review`
+-- AUTO_INCREMENT per la tabella `book_review`
 --
 ALTER TABLE `book_review`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT for table `category`
+-- AUTO_INCREMENT per la tabella `category`
 --
 ALTER TABLE `category`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `customer`
+-- AUTO_INCREMENT per la tabella `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `customer_address`
+-- AUTO_INCREMENT per la tabella `customer_address`
 --
 ALTER TABLE `customer_address`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `order`
+-- AUTO_INCREMENT per la tabella `order`
 --
 ALTER TABLE `order`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT for table `publisher`
+-- AUTO_INCREMENT per la tabella `order_item`
+--
+ALTER TABLE `order_item`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
+-- AUTO_INCREMENT per la tabella `publisher`
 --
 ALTER TABLE `publisher`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `shopping_cart`
+-- AUTO_INCREMENT per la tabella `shopping_cart`
 --
 ALTER TABLE `shopping_cart`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `shopping_cart_item`
+-- AUTO_INCREMENT per la tabella `shopping_cart_item`
 --
 ALTER TABLE `shopping_cart_item`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- Constraints for dumped tables
+-- Limiti per le tabelle scaricate
 --
 
 --
--- Constraints for table `book`
+-- Limiti per la tabella `book`
 --
 ALTER TABLE `book`
-  ADD CONSTRAINT `book_ibfk_1` FOREIGN KEY (`publisher_id`) REFERENCES `publisher` (`id`);
+  ADD CONSTRAINT `book_ibfk_1` FOREIGN KEY (`publisher_id`) REFERENCES `publisher` (`id`) ON DELETE CASCADE;
 
 --
--- Constraints for table `book_author`
+-- Limiti per la tabella `book_author`
 --
 ALTER TABLE `book_author`
   ADD CONSTRAINT `book_author_ibfk_1` FOREIGN KEY (`author_id`) REFERENCES `author` (`id`),
-  ADD CONSTRAINT `book_author_ibfk_2` FOREIGN KEY (`book_id`) REFERENCES `book` (`id`);
+  ADD CONSTRAINT `book_author_ibfk_2` FOREIGN KEY (`book_id`) REFERENCES `book` (`id`) ON DELETE CASCADE;
 
 --
--- Constraints for table `book_category`
+-- Limiti per la tabella `book_category`
 --
 ALTER TABLE `book_category`
   ADD CONSTRAINT `book_category_ibfk_1` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`),
-  ADD CONSTRAINT `book_category_ibfk_2` FOREIGN KEY (`book_id`) REFERENCES `book` (`id`);
+  ADD CONSTRAINT `book_category_ibfk_2` FOREIGN KEY (`book_id`) REFERENCES `book` (`id`) ON DELETE CASCADE;
 
 --
--- Constraints for table `book_review`
+-- Limiti per la tabella `book_review`
 --
 ALTER TABLE `book_review`
   ADD CONSTRAINT `book_review_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`id`),
-  ADD CONSTRAINT `book_review_ibfk_2` FOREIGN KEY (`book_id`) REFERENCES `book` (`id`);
+  ADD CONSTRAINT `book_review_ibfk_2` FOREIGN KEY (`book_id`) REFERENCES `book` (`id`) ON DELETE CASCADE;
 
 --
--- Constraints for table `customer_address`
+-- Limiti per la tabella `customer_address`
 --
 ALTER TABLE `customer_address`
-  ADD CONSTRAINT `customer_address_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`id`);
+  ADD CONSTRAINT `customer_address_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`id`) ON DELETE CASCADE;
 
 --
--- Constraints for table `customer_wishlist`
+-- Limiti per la tabella `customer_wishlist`
 --
 ALTER TABLE `customer_wishlist`
   ADD CONSTRAINT `customer_wishlist_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`id`),
-  ADD CONSTRAINT `customer_wishlist_ibfk_2` FOREIGN KEY (`book_id`) REFERENCES `book` (`id`);
+  ADD CONSTRAINT `customer_wishlist_ibfk_2` FOREIGN KEY (`book_id`) REFERENCES `book` (`id`) ON DELETE CASCADE;
 
 --
--- Constraints for table `order`
+-- Limiti per la tabella `order`
 --
 ALTER TABLE `order`
-  ADD CONSTRAINT `order_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`id`);
+  ADD CONSTRAINT `order_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`id`) ON DELETE CASCADE;
 
 --
--- Constraints for table `order_item`
+-- Limiti per la tabella `order_item`
 --
 ALTER TABLE `order_item`
   ADD CONSTRAINT `order_item_ibfk_1` FOREIGN KEY (`order_id`) REFERENCES `order` (`id`),
-  ADD CONSTRAINT `order_item_ibfk_2` FOREIGN KEY (`book_id`) REFERENCES `book` (`id`);
+  ADD CONSTRAINT `order_item_ibfk_2` FOREIGN KEY (`book_id`) REFERENCES `book` (`id`) ON DELETE CASCADE;
 
 --
--- Constraints for table `shopping_cart`
+-- Limiti per la tabella `shopping_cart`
 --
 ALTER TABLE `shopping_cart`
-  ADD CONSTRAINT `shopping_cart_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`id`);
+  ADD CONSTRAINT `shopping_cart_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`id`) ON DELETE CASCADE;
 
 --
--- Constraints for table `shopping_cart_item`
+-- Limiti per la tabella `shopping_cart_item`
 --
 ALTER TABLE `shopping_cart_item`
   ADD CONSTRAINT `shopping_cart_item_ibfk_1` FOREIGN KEY (`shopping_cart_id`) REFERENCES `shopping_cart` (`id`),
-  ADD CONSTRAINT `shopping_cart_item_ibfk_2` FOREIGN KEY (`book_id`) REFERENCES `book` (`id`);
+  ADD CONSTRAINT `shopping_cart_item_ibfk_2` FOREIGN KEY (`book_id`) REFERENCES `book` (`id`) ON DELETE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
