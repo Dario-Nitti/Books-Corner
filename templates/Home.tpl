@@ -1,4 +1,6 @@
 {include file="header.tpl" title="Benvenuto"}
+<link rel="stylesheet" href="./templates/css/products.css">
+
 <div class="container">
     <div class="row">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -34,14 +36,27 @@
 </div>
 <div class="container news">
     <h1> TUTTE LE NOVITÀ</h1>
-    <h3>Tutte le nuove uscite subito disponibili!!</h3>
-    <div class="grid-container">
-        {foreach from=$books item="book"}
-            <div class="grid-item">
-                <a href="Product-item.php?id={$book.id}"><img src="{$book.pic}"  style="width:20%">
-                    <p><strong>{$book.title}</strong></p></a>
-            </div>
-        {/foreach}
+    <h3>Tutte le nuove uscite subito disponibili!!</h3><br><br>
+
+    <div class="row">
+        {if (!empty($books))}
+            {foreach from=$books item="book"}
+                <div class="col-md-3">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="Product-item.php?id={$book.id}">
+                                <img src="{$book.pic}" alt="product-catalog" style="width:50%">
+                        </div>
+                        <div class="product-content">
+                            <h3 class="title"><strong> {$book.title}</strong></h3></a>
+                            <div class="price">{$book.price} €</div>
+                        </div>
+                    </div>
+                </div>
+            {/foreach}
+        {else}
+            <div></div>
+        {/if}
     </div>
 </div>
 

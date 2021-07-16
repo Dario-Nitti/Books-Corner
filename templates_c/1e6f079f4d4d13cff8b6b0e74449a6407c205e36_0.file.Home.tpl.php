@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-07-09 18:02:50
+/* Smarty version 3.1.39, created on 2021-07-16 17:17:04
   from 'C:\xampp\htdocs\Books-Corner\templates\Home.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_60e8732a15e598_88091857',
+  'unifunc' => 'content_60f1a2f05aca60_06957923',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1e6f079f4d4d13cff8b6b0e74449a6407c205e36' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Books-Corner\\templates\\Home.tpl',
-      1 => 1625846569,
+      1 => 1626448623,
       2 => 'file',
     ),
   ),
@@ -22,9 +22,11 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_60e8732a15e598_88091857 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60f1a2f05aca60_06957923 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('title'=>"Benvenuto"), 0, false);
 ?>
+<link rel="stylesheet" href="./templates/css/products.css">
+
 <div class="container">
     <div class="row">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -60,24 +62,38 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
 </div>
 <div class="container news">
     <h1> TUTTE LE NOVITÀ</h1>
-    <h3>Tutte le nuove uscite subito disponibili!!</h3>
-    <div class="grid-container">
-        <?php
+    <h3>Tutte le nuove uscite subito disponibili!!</h3><br><br>
+
+    <div class="row">
+        <?php if ((!empty($_smarty_tpl->tpl_vars['books']->value))) {?>
+            <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['books']->value, 'book');
 $_smarty_tpl->tpl_vars['book']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['book']->value) {
 $_smarty_tpl->tpl_vars['book']->do_else = false;
 ?>
-            <div class="grid-item">
-                <a href="Product-item.php?id=<?php echo $_smarty_tpl->tpl_vars['book']->value['id'];?>
-"><img src="<?php echo $_smarty_tpl->tpl_vars['book']->value['pic'];?>
-"  style="width:20%">
-                    <p><strong><?php echo $_smarty_tpl->tpl_vars['book']->value['title'];?>
-</strong></p></a>
-            </div>
-        <?php
+                <div class="col-md-3">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="Product-item.php?id=<?php echo $_smarty_tpl->tpl_vars['book']->value['id'];?>
+">
+                                <img src="<?php echo $_smarty_tpl->tpl_vars['book']->value['pic'];?>
+" alt="product-catalog" style="width:50%">
+                        </div>
+                        <div class="product-content">
+                            <h3 class="title"><strong> <?php echo $_smarty_tpl->tpl_vars['book']->value['title'];?>
+</strong></h3></a>
+                            <div class="price"><?php echo $_smarty_tpl->tpl_vars['book']->value['price'];?>
+ €</div>
+                        </div>
+                    </div>
+                </div>
+            <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+        <?php } else { ?>
+            <div></div>
+        <?php }?>
     </div>
 </div>
 

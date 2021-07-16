@@ -53,13 +53,33 @@
                         </ul>
                         <div class="tab-content">
                             <div id="tab1" class="tab-pane fade in active">
-                                <form action="review.php">
-                                    <input type="text" id="review" name="review">
-                                    <input class="btn btn-primary" type="submit" value="Aggiungi recensione">
-                                </form>
+                                {if (!empty($reviews))}
+                                    {foreach from=$reviews item=review}
+                                    <h4>{$review.email}</h4>
+                                        <strong>{$review.title}</strong>
+                                        <p>{$review.body}</p>
+                                        <p>{$review.rating}</p>
+                                        <p style="color: gray">{$review.submission_date}</p>
+                                        <hr>
+                                    {/foreach}
+                                {else}
+                                    <div></div>
+                                {/if}
                                 <br><br>
                                 <div class="review">
-                                    <strong>Nome utente </strong>
+                                    <br><br>
+                                <strong><p>  &nbsp;&nbsp;&nbsp;&nbsp;Aggiungi la tua recensione</p></strong>
+                                    <form action="add-review.php" method="post">
+                                        &nbsp; <textarea type="text" id="review" name="testo-rec"
+                                                         placeholder="recensione" rows="5" cols="50"
+                                                         style="margin-bottom: -10px"></textarea>
+                                        &nbsp; <input type="text" id="review" name="titolo-rec" placeholder="titolo">
+                                        <input type="hidden" name="id_book" value={$book.id}>
+                                        &nbsp; <input type="number" id="review" name="number-rec" min="1" max="5"
+                                                      placeholder="voto">
+                                        &nbsp;&nbsp;<input class="btn btn-primary" type="submit"
+                                                           value="Aggiungi recensione">
+                                    </form>
                                     <p>  <?php echo "Data" ?></p>
                                     <p1> <?php echo "$" ?></p1>
                                 </div>

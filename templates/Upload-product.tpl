@@ -7,9 +7,10 @@
     <div class="row">
         <div class="col-4">
             <h2 class="w3-bar-item side">Menu</h2>
-            <a href="All-Product.tpl" class="w3-bar-item w3-button "><strong>Tutti i Prodotti</strong></a><br>
+            <a href="all-product.php" class="w3-bar-item w3-button "><strong>Tutti i Prodotti</strong></a><br>
             <a href="#" class="w3-bar-item w3-button active"><strong>Inserisci un Articolo</strong></a><br>
-            <a href="Users_Man.html" class="w3-bar-item w3-button active"><strong>Gestione Utenti</strong></a><br>
+            <a href="admin-orders.php" class="w3-bar-item w3-button "><strong>Tutti gli ordini</strong></a><br>
+            <a href="Logout.php" class="w3-bar-item w3-button active"><strong>Logout</strong></a><br>
 
         </div>
         <div class="col-8">
@@ -28,7 +29,7 @@
                 <p><strong>Editore:<strong></p>
                 <input class="input" type="text" id="editore" name="editore"><br><br>
                 <p><strong>Quantità:<strong></p>
-                <input class="input" type="number" id="quantita" name="quantita" min="0" max="10"><br><br>
+                <input class="input" type="number" id="quantita" name="quantita" min="0" max="20"><br><br>
                 <p><strong>Prezzo:<strong></p>
                 <input class="input" type="text" id="prezzo" name="prezzo"><br><br>
                 <p><strong>Categoria:<strong></p>

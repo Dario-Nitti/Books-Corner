@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-07-13 11:19:21
+/* Smarty version 3.1.39, created on 2021-07-16 17:21:29
   from 'C:\xampp\htdocs\Books-Corner\templates\Address.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_60ed5a99351124_28565573',
+  'unifunc' => 'content_60f1a3f9c0d720_05238190',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '72f5b8689d92c50597f4a1d24a8fe40f469f21ed' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Books-Corner\\templates\\Address.tpl',
-      1 => 1626167955,
+      1 => 1626442167,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_60ed5a99351124_28565573 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60f1a3f9c0d720_05238190 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('title'=>"Indirizzo"), 0, false);
 ?>
 
@@ -32,7 +32,7 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
         <div class="col-4">
             <h2 class="w3-bar-item side">Menu</h2>
             <a href="profile.php" id="datac" class="w3-bar-item w3-button "><strong>Liste desideri</strong></a><br>
-            <a href="Order.tpl" id="orderac" class="w3-bar-item w3-button active"><strong>I Miei Ordini</strong></a><br>
+            <a href="Order.php" id="orderac" class="w3-bar-item w3-button active"><strong>I Miei Ordini</strong></a><br>
             <a href="#" id="addressc" class="w3-bar-item w3-button"><strong>In Tuoi
                     Indirizzi</strong></a><br>
             <a href="Cart.php" id="Logout" class="w3-bar-item w3-button"><strong>Carello</strong></a><br>

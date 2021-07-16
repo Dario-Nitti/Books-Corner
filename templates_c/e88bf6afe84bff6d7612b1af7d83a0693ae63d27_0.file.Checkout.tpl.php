@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-07-15 17:01:02
+/* Smarty version 3.1.39, created on 2021-07-16 18:03:06
   from 'C:\xampp\htdocs\Books-Corner\templates\Checkout.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_60f04daec333e6_82910604',
+  'unifunc' => 'content_60f1adba9f0a74_71832761',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e88bf6afe84bff6d7612b1af7d83a0693ae63d27' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Books-Corner\\templates\\Checkout.tpl',
-      1 => 1626361261,
+      1 => 1626451383,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_60f04daec333e6_82910604 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60f1adba9f0a74_71832761 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp\\htdocs\\Books-Corner\\libs\\plugins\\function.math.php','function'=>'smarty_function_math',),));
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('title'=>''), 0, false);
 ?>
@@ -58,7 +58,8 @@ $_smarty_tpl->tpl_vars['book']->do_else = false;
 </p>
                             <br>
                             <h4><strong>&nbsp;&nbsp;<?php echo smarty_function_math(array('equation'=>"x * y",'x'=>$_smarty_tpl->tpl_vars['book']->value['subtotal'],'y'=>$_smarty_tpl->tpl_vars['book']->value['item_quantity']),$_smarty_tpl);?>
- €</strong></h4>
+
+                                    €</strong></h4>
                         </div>
                     </div>
                 </div>
@@ -74,6 +75,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                 <h2>Indirizzo di spedizione</h2>
                 <div class="card check">
                     <div>
+                        <?php if ((!empty($_smarty_tpl->tpl_vars['addresses']->value))) {?>
                         <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['addresses']->value, 'addr');
 $_smarty_tpl->tpl_vars['addr']->do_else = true;
@@ -94,12 +96,13 @@ $_smarty_tpl->tpl_vars['addr']->do_else = false;
 </p>
                                 <p> &nbsp; &nbsp; &nbsp; &nbsp;<?php echo $_smarty_tpl->tpl_vars['addr']->value['state'];?>
 </p>
-
-
                             </div>
                         <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+                        <?php } else { ?>
+                        <div></div>
+                        <?php }?>
                     </div>
                 </div>
             </div>

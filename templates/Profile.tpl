@@ -13,22 +13,30 @@
             <a href="Address.php" id="addressc" class="w3-bar-item w3-button"><strong>In Tuoi
                     Indirizzi</strong></a><br>
             <a href="Cart.php" id="Logout" class="w3-bar-item w3-button"><strong>Carello</strong></a><br>
-
             <a href="Logout.php" id="Logout" class="w3-bar-item w3-button"><strong>Logout</strong></a><br>
         </div>
         <div class="col-8">
             <section>
                 <h2> Benvenuto {$user.first_name}</h2><br><br>
-                <div class="grid-container">
-                    {if !empty($books)}
-                        <div class="grid-item">
-                            {foreach from=$books item="book"}
-                            <a href="Product-item.php?id={$book.id}"><img src="{$book.pic}" style="width:20%">
-                                <p><strong>{$book.title}</strong></p></a>
-                            {/foreach}
-                        </div>
-                        {else}
-                    <div></div>
+                <div class="row">
+                    {if (!empty($books))}
+                        {foreach from=$books item="book"}
+                            <div class="col-md-3">
+                                <div class="product-grid">
+                                    <div class="product-image">
+                                        <a href="Product-item.php?id={$book.book_id}">
+                                            <img src="{$book.pic}" alt="product-catalog" style="width:50%">
+                                    </div>
+                                    <div class="product-content">
+                                        <h3 class="title"><strong> {$book.title}</strong></h3></a>
+                                        <div class="price">{$book.price} €</div>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                        {/foreach}
+                    {else}
+                        <div></div>
                     {/if}
                 </div>
             </section>

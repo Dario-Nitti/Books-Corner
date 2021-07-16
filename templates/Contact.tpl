@@ -9,12 +9,8 @@
     <p>Hai domande? Non esitare a contattarci direttamente. Il nostro team ti aiuterà.</p>
 
 
-            <p><strong>Nome</strong></p>
-            <input type="text" id="name" name="name" class="form-control" placeholder="Nome"><br>
-
             <p><strong>Email</strong></p>
-            <input type="email" id="email" name="email" class="form-control" style="width: 100%"
-                   placeholder="La tua Email"><br>
+            <input type="email" id="name" name="name" class="form-control" placeholder="Nome"><br>
 
             <p><strong>Messaggio</strong></p>
             <textarea type="text" id="message" name="message" class="form-control"

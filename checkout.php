@@ -33,6 +33,7 @@ while ($address = mysqli_fetch_array($result)) {
 }
 
 
+
 $smarty->assign("books",$data);
 $smarty->assign("total",$tot);
 $smarty->display("Checkout.tpl");

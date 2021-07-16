@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-07-09 10:16:35
+/* Smarty version 3.1.39, created on 2021-07-16 18:45:33
   from 'C:\xampp\htdocs\Books-Corner\templates\Upload-product.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_60e805e3d28385_81145858',
+  'unifunc' => 'content_60f1b7ad836d58_03600386',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5aa8829ab6c09475fc35e1df8fb244e888d1b24b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Books-Corner\\templates\\Upload-product.tpl',
-      1 => 1625818593,
+      1 => 1626453932,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_60e805e3d28385_81145858 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60f1b7ad836d58_03600386 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('title'=>"Carica il prodotto"), 0, false);
 ?>
 
@@ -33,9 +33,10 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
     <div class="row">
         <div class="col-4">
             <h2 class="w3-bar-item side">Menu</h2>
-            <a href="All-Product.tpl" class="w3-bar-item w3-button "><strong>Tutti i Prodotti</strong></a><br>
+            <a href="all-product.php" class="w3-bar-item w3-button "><strong>Tutti i Prodotti</strong></a><br>
             <a href="#" class="w3-bar-item w3-button active"><strong>Inserisci un Articolo</strong></a><br>
-            <a href="Users_Man.html" class="w3-bar-item w3-button active"><strong>Gestione Utenti</strong></a><br>
+            <a href="admin-orders.php" class="w3-bar-item w3-button "><strong>Tutti gli ordini</strong></a><br>
+            <a href="Logout.php" class="w3-bar-item w3-button active"><strong>Logout</strong></a><br>
 
         </div>
         <div class="col-8">
@@ -54,7 +55,7 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
                 <p><strong>Editore:<strong></p>
                 <input class="input" type="text" id="editore" name="editore"><br><br>
                 <p><strong>Quantità:<strong></p>
-                <input class="input" type="number" id="quantita" name="quantita" min="0" max="10"><br><br>
+                <input class="input" type="number" id="quantita" name="quantita" min="0" max="20"><br><br>
                 <p><strong>Prezzo:<strong></p>
                 <input class="input" type="text" id="prezzo" name="prezzo"><br><br>
                 <p><strong>Categoria:<strong></p>

@@ -6,7 +6,7 @@
         <div class="col-4">
             <h2 class="w3-bar-item side">Menu</h2>
             <a href="profile.php" id="datac" class="w3-bar-item w3-button "><strong>Liste desideri</strong></a><br>
-            <a href="Order.tpl" id="orderac" class="w3-bar-item w3-button active"><strong>I Miei Ordini</strong></a><br>
+            <a href="Order.php" id="orderac" class="w3-bar-item w3-button active"><strong>I Miei Ordini</strong></a><br>
             <a href="#" id="addressc" class="w3-bar-item w3-button"><strong>In Tuoi
                     Indirizzi</strong></a><br>
             <a href="Cart.php" id="Logout" class="w3-bar-item w3-button"><strong>Carello</strong></a><br>

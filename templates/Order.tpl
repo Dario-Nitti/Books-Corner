@@ -8,7 +8,7 @@
     <div class="row">
         <div class="col-4">
             <h2 class="w3-bar-item side">Menu</h2>
-            <a href="profile.php" id="datac" class="w3-bar-item w3-button active"><strong>I Miei Dati</strong></a><br>
+            <a href="profile.php" id="datac" class="w3-bar-item w3-button active"><strong>Liste desideri</strong></a><br>
             <a href="#" id="orderac" class="w3-bar-item w3-button"><strong>I Miei Ordini</strong></a><br>
             <a href="Address.php" id="addressc" class="w3-bar-item w3-button"><strong>In Tuoi
                     Indirizzi</strong></a><br>
@@ -19,7 +19,7 @@
         <div class="col-8">
             <section>
                 <br>
-                {if !empty($orders)}
+                {if (!empty($orders))}
                     {foreach from=$orders item="order"}
                     <div class="order card">
                     <div class="card-body">
@@ -29,8 +29,9 @@
                             </div>
                             <div class="col-12 col-md-8 option">
                                 <h3 class="card-title" style="margin-bottom: -10px">{$order.title}</h3>
+                                <br><br>
+                                <p>Stato: {$order.status}</p>
                                 <h3 class="card-text" id="price">{$order.subtotal}€</h3>
-
                             </div>
                         </div>
                     </div>

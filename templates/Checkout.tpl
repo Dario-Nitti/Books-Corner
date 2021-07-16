@@ -21,7 +21,8 @@
                             <br>
                             <p>Quantità: {$book.item_quantity}</p>
                             <br>
-                            <h4><strong>&nbsp;&nbsp;{math equation="x * y" x=$book.subtotal y=$book.item_quantity} €</strong></h4>
+                            <h4><strong>&nbsp;&nbsp;{math equation="x * y" x=$book.subtotal y=$book.item_quantity}
+                                    €</strong></h4>
                         </div>
                     </div>
                 </div>
@@ -35,6 +36,7 @@
                 <h2>Indirizzo di spedizione</h2>
                 <div class="card check">
                     <div>
+                        {if (!empty($addresses))}
                         {foreach from=$addresses item=addr}
                             <div class="form-check">
 
@@ -44,10 +46,11 @@
                                 <p> &nbsp; &nbsp; &nbsp; &nbsp;{$addr.town} , {$addr.province}</p>
                                 <p> &nbsp; &nbsp; &nbsp; &nbsp;{$addr.postcode}</p>
                                 <p> &nbsp; &nbsp; &nbsp; &nbsp;{$addr.state}</p>
-
-
                             </div>
                         {/foreach}
+                        {else}
+                        <div></div>
+                        {/if}
                     </div>
                 </div>
             </div>

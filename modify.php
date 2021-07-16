@@ -1,9 +1,8 @@
 <?php
 include "lib.inc.php";
-$smarty = includesmarty();
+$smarty=includesmarty();
+$book_list = "SELECT * FROM book WHERE id";
 $id = $_GET["id"];
-$id_logged = $_SESSION["id"];
-
 /*
  * prendo i dati del libro selezionato
  */
@@ -22,23 +21,21 @@ $author = mysqli_fetch_array($result_auth);
  * prendo i dati dell'autore del libro selezionato
 
  */
+/*
+ * prendo l'editore del libro
+ */
+$pub = "SELECT * FROM publisher INNER JOIN book ON book.id=".$id;
+$result_pub = mysqli_query($con, $pub);
+$publisher = mysqli_fetch_array($result_pub);
 
 $cat="SELECT * FROM category INNER JOIN book_category ON book_id=".$id;
 $result_category=mysqli_query($con,$cat);
 $category=mysqli_fetch_array($result_category);
 
-$rev="SELECT * FROM book_review INNER JOIN customer ON customer.id=".$id_logged;
-$res_review=mysqli_query($con,$rev);
-$row=array();
-while ($row = mysqli_fetch_array($res_review)) {
-    $reviews[] = $row;
-    $smarty->assign("reviews",$reviews);
 
-}
-
-
+$smarty->assign("pub",$publisher);
 $smarty->assign("book", $book_item);
 $smarty->assign("author", $author);
 $smarty->assign("category",$category);
-$smarty->display("Product-item.tpl");
 
+$smarty->display("modify.tpl");
