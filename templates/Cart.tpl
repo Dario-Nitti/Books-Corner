@@ -34,22 +34,35 @@
                                                     </div>
                                                     <div class="col-sm-10">
                                                         <h4 class="nomargin"></h4>
-                                                        <p></p>
+                                                        <strong>{$cart.title}</strong>
                                                     </div>
                                                 </div>
 
-
-                                            </td>
-                                            <!--- prezzo--->
+                                                <!--- prezzo--->
                                             <td data-th="Price">
-                                                <strong>{math equation="x * y" x=$cart.subtotal y=$cart.item_quantity}
+                                                <strong>{$cart.subtotal}
+                                                    <input type="hidden" value="{$cart.price}" id="price">
                                             </td>
                                         </strong>
+
                                         <td data-th="Quantity">
-                                            <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$cart.item_quantity}</p>
+                                            <form action="update_cart.php" method="post">
+                                                <input type="number" name="quantity_item" value="{$cart.item_quantity}"
+                                                       min="1" max="{$cart.quantity}">
+                                                <input type="hidden" name="id_book_cart" value="{$cart.book_id}">
                                         </td>
-                                        <!---subtotale-->
-                                        <td data-th="Subtotal" class="text-center"></td>
+                                        <!---Elimina-->
+                                        <td data-th="Subtotal" class="text-center">
+                                            <input class="btn btn-primary" type="submit" value="Aggiorna Carrello"">
+                                            </form>
+
+                                            <form action="del_cart.php" method="post">
+                                                <input type="hidden" name="id_book_cart" value="{$cart.book_id}">
+                                                <br>
+                                                <input type="submit" class="btn btn-primary" name="Elimina"
+                                                       value="Rimuovi Articolo">
+                                            </form>
+                                        </td>
                                         </tr>
 
 
@@ -69,7 +82,7 @@
                                     <td colspan="2" class="hidden-xs"></td>
                                     <td class="hidden-xs text-center"><strong></strong></td>
                                     <!---totale-->
-                                    <td><a href="checkout.php" class="btn btn-primary">Vai alla cassa</a></td>
+
                                 </tr>
                                 </tfoot>
                             </table>
@@ -99,6 +112,7 @@
         </div>
     </div>
 </div>
+
 
 {include file="footer.tpl"}
 

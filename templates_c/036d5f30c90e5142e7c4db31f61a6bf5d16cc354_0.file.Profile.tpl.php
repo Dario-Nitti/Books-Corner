@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-07-16 18:58:54
+/* Smarty version 3.1.39, created on 2021-07-17 11:06:33
   from 'C:\xampp\htdocs\Books-Corner\templates\Profile.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_60f1bace1f0e69_12165560',
+  'unifunc' => 'content_60f29d99c05db2_39738321',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '036d5f30c90e5142e7c4db31f61a6bf5d16cc354' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Books-Corner\\templates\\Profile.tpl',
-      1 => 1626454733,
+      1 => 1626454738,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_60f1bace1f0e69_12165560 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60f29d99c05db2_39738321 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('title'=>"Profilo"), 0, false);
 ?>
 
@@ -67,7 +67,6 @@ $_smarty_tpl->tpl_vars['book']->do_else = false;
                                         <div class="price"><?php echo $_smarty_tpl->tpl_vars['book']->value['price'];?>
  €</div>
                                         <br>
-
                                     </div>
                                 </div>
                             </div>

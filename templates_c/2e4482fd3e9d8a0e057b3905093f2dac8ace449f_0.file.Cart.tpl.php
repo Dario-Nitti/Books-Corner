@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-07-15 17:23:51
+/* Smarty version 3.1.39, created on 2021-07-17 17:59:29
   from 'C:\xampp\htdocs\Books-Corner\templates\Cart.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_60f053073b6771_82778055',
+  'unifunc' => 'content_60f2fe619b4026_94834650',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2e4482fd3e9d8a0e057b3905093f2dac8ace449f' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Books-Corner\\templates\\Cart.tpl',
-      1 => 1626362382,
+      1 => 1626537568,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_60f053073b6771_82778055 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60f2fe619b4026_94834650 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp\\htdocs\\Books-Corner\\libs\\plugins\\function.math.php','function'=>'smarty_function_math',),));
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('title'=>"Carrello"), 0, false);
 ?>
@@ -67,24 +67,42 @@ $_smarty_tpl->tpl_vars['cart']->do_else = false;
                                                     </div>
                                                     <div class="col-sm-10">
                                                         <h4 class="nomargin"></h4>
-                                                        <p></p>
+                                                        <strong><?php echo $_smarty_tpl->tpl_vars['cart']->value['title'];?>
+</strong>
                                                     </div>
                                                 </div>
 
-
-                                            </td>
-                                            <!--- prezzo--->
+                                                <!--- prezzo--->
                                             <td data-th="Price">
-                                                <strong><?php echo smarty_function_math(array('equation'=>"x * y",'x'=>$_smarty_tpl->tpl_vars['cart']->value['subtotal'],'y'=>$_smarty_tpl->tpl_vars['cart']->value['item_quantity']),$_smarty_tpl);?>
+                                                <strong><?php echo $_smarty_tpl->tpl_vars['cart']->value['subtotal'];?>
 
+                                                    <input type="hidden" value="<?php echo $_smarty_tpl->tpl_vars['cart']->value['price'];?>
+" id="price">
                                             </td>
                                         </strong>
+
                                         <td data-th="Quantity">
-                                            <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $_smarty_tpl->tpl_vars['cart']->value['item_quantity'];?>
-</p>
+                                            <form action="update_cart.php" method="post">
+                                                <input type="number" name="quantity_item" value="<?php echo $_smarty_tpl->tpl_vars['cart']->value['item_quantity'];?>
+"
+                                                       min="1" max="<?php echo $_smarty_tpl->tpl_vars['cart']->value['quantity'];?>
+">
+                                                <input type="hidden" name="id_book_cart" value="<?php echo $_smarty_tpl->tpl_vars['cart']->value['book_id'];?>
+">
                                         </td>
-                                        <!---subtotale-->
-                                        <td data-th="Subtotal" class="text-center"></td>
+                                        <!---Elimina-->
+                                        <td data-th="Subtotal" class="text-center">
+                                            <input class="btn btn-primary" type="submit" value="Aggiorna Carrello"">
+                                            </form>
+
+                                            <form action="del_cart.php" method="post">
+                                                <input type="hidden" name="id_book_cart" value="<?php echo $_smarty_tpl->tpl_vars['cart']->value['book_id'];?>
+">
+                                                <br>
+                                                <input type="submit" class="btn btn-primary" name="Elimina"
+                                                       value="Rimuovi Articolo">
+                                            </form>
+                                        </td>
                                         </tr>
 
 
@@ -106,7 +124,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                                     <td colspan="2" class="hidden-xs"></td>
                                     <td class="hidden-xs text-center"><strong></strong></td>
                                     <!---totale-->
-                                    <td><a href="checkout.php" class="btn btn-primary">Vai alla cassa</a></td>
+
                                 </tr>
                                 </tfoot>
                             </table>
@@ -146,6 +164,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         </div>
     </div>
 </div>
+
 
 <?php $_smarty_tpl->_subTemplateRender("file:footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>

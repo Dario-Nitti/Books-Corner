@@ -49,8 +49,8 @@ if ($num == 1) {
         $_SESSION['user'] = $email;
         header('location:Upload-product.php');
     } else {
-        echo "Username e Password errate!!";
         $smarty->assign("logged", false);
+        $smarty->display("Error.php");
 
 
     }

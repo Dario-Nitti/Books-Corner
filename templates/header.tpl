@@ -37,11 +37,14 @@
         <div class="top_nav">
             <div class="left">
                 <div class="logo"><p><span>Book's</span> Corner</p></div>
-
+                <div class="search_bar">
+                    <input class="form-control" id="search" type="text" placeholder="Search" aria-label="Search">
+                </div>
             </div>
             <div class="right">
                 <ul>
                     <a href="/Books-Corner/Login.php" class="fa fa-user" aria-hidden="true"></a>
+
                 </ul>
             </div>
         </div>
