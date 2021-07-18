@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-07-16 18:03:06
+/* Smarty version 3.1.39, created on 2021-07-18 10:32:16
   from 'C:\xampp\htdocs\Books-Corner\templates\Checkout.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_60f1adba9f0a74_71832761',
+  'unifunc' => 'content_60f3e71067eb13_86397193',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e88bf6afe84bff6d7612b1af7d83a0693ae63d27' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Books-Corner\\templates\\Checkout.tpl',
-      1 => 1626451383,
+      1 => 1626531760,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_60f1adba9f0a74_71832761 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60f3e71067eb13_86397193 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp\\htdocs\\Books-Corner\\libs\\plugins\\function.math.php','function'=>'smarty_function_math',),));
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('title'=>''), 0, false);
 ?>
@@ -150,7 +150,6 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 ?>
 
 
-</body>
-</html>
+
 <?php }
 }

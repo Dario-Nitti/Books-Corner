@@ -2,7 +2,7 @@
 include "lib.inc.php";
 $smarty=includesmarty();
 
-$sql_admin_orders="SELECT * FROM order_item INNER JOIN book ON book.id=order_item.book_id INNER JOIN customer";
+$sql_admin_orders="SELECT `order`.`id`,`order`.`submission_date`,`order`.`status`,customer.email FROM `order` INNER JOIN customer ON `order`.`customer_id`=customer.id";
 $res= mysqli_query($con,$sql_admin_orders);
 $resrow=array();
 while ($resrow = mysqli_fetch_array($res)) {

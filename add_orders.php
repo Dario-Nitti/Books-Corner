@@ -3,7 +3,7 @@ include "lib.inc.php";
 checkSessione();
 $id_logged = $_SESSION["id"];
 
-$sql_order = "INSERT INTO `order`(status, customer_id) VALUES ('Spedito',$id_logged)";
+$sql_order = "INSERT INTO `order`(status, customer_id) VALUES ('Preso in carico',$id_logged)";
 $con->query($sql_order);
 
 
@@ -28,7 +28,7 @@ $row = mysqli_fetch_object($email_res);
 $email = $row->email;
 
 $name = $_POST['name'];
-$body =  "Il tuo ordine e' stato preso in carico e spedito";
+$body =  "Il tuo ordine e' stato preso in carico";
 
 $subject = "Il tuo ordine di Book's Corner";
 $headers = "Book's Corner";

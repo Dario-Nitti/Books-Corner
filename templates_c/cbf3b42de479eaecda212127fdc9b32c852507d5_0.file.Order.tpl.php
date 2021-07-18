@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-07-16 18:15:34
+/* Smarty version 3.1.39, created on 2021-07-18 16:11:06
   from 'C:\xampp\htdocs\Books-Corner\templates\Order.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_60f1b0a69bc857_43760921',
+  'unifunc' => 'content_60f4367af18581_81603644',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cbf3b42de479eaecda212127fdc9b32c852507d5' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Books-Corner\\templates\\Order.tpl',
-      1 => 1626452133,
+      1 => 1626617436,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_60f1b0a69bc857_43760921 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60f4367af18581_81603644 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('title'=>"ordini"), 0, false);
 ?>
 

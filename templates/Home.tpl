@@ -53,11 +53,13 @@
                         </div>
                     </div>
                 </div>
+
             {/foreach}
         {else}
             <div></div>
         {/if}
     </div>
+    <br>
 </div>
 
 {include file="footer.tpl"}

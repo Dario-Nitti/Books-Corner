@@ -8,7 +8,7 @@
             <h2 class="w3-bar-item side">Menu</h2>
             <a href="all-product.php" class="w3-bar-item w3-button "><strong>Tutti i Prodotti</strong></a><br>
             <a href="Upload-product.php" class="w3-bar-item w3-button active"><strong>Inserisci un Articolo</strong></a><br>
-            <a href="#" class="w3-bar-item w3-button "><strong>Tutti gli ordini</strong></a><br>
+            <a href="admin-orders.php" class="w3-bar-item w3-button "><strong>Tutti gli ordini</strong></a><br>
             <a href="Logout.php" class="w3-bar-item w3-button active"><strong>Logout</strong></a><br>
 
         </div>
@@ -17,31 +17,46 @@
             <section>
                 <br>
                 {if (!empty($orders))}
-                    {foreach from=$orders item="order"}
-                        <div class="order card">
+                    <div class="order card">
+
+                        {foreach from=$orders item="order"}
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-6 col-md-4">
-                                        <img src="{$order.pic}" alt="Order" width="150" height="170" style="float: left;">
+                                        <h3 class="card-title">Ordine No. {$order.id}</h3>
                                     </div>
                                     <div class="col-12 col-md-8 option">
-                                        <h3 class="card-title" style="margin-bottom: -10px">{$order.title}</h3>
-                                        <br><br>
+                                        <br>
                                         <p>Ordine fatto da: {$order.email}</p>
-                                        <h3 class="card-text" id="price">{$order.subtotal}€</h3>
+                                        <p>il: {$order.submission_date}</p>
+                                        <p>Stato dell'ordine:<strong>{$order.status}</strong></p>
+                                            <button  onclick="location.href='orders-details.php?id={$order.id}'" type="submit" class="btn btn-primary" name="details-order"
+                                                    style="margin-bottom: -78px;margin-left: 200px">Dettagli Ordine</button>
                                     </div>
+
                                 </div>
                             </div>
-                        </div>
-                    {/foreach}
+                            <form action="send_order.php" method="post">
+                                <input type="hidden" name="email" value="{$order.email}">
+                                <input type="hidden" name="id" value="{$order.id}">
+
+                                <input type="submit" class="btn btn-primary" name="send-order"
+                                       value="Spedisci ordine" style="margin-left: 600px">
+
+                            </form>
+                            <br>
+                        {/foreach}
+
+
+                    </div>
                 {else}
                     <div></div>
                 {/if}
             </section>
-                <br>
-            </div>
+            <br>
         </div>
     </div>
+</div>
 </div>
 
 {include file="footer.tpl"}
